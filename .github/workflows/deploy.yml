@@ -13,11 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Install dependencies and build vue app
         uses: actions/setup-node@v4
         with:
           path: frontend/frontend
-          node-version: 20  # Ensure this matches your Vue version
+        #   node-version: 20  # Ensure this matches your Vue version
           run: npm install && npm run build
 
     #   - name: Install dependencies
@@ -27,8 +27,4 @@ jobs:
     #     run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages   # Target branch for deployment
-          folder: frontend/frontend/dist  # Path to built files
-          clean: true  # Remove old files before deployment
+        run: git subtree push --prefix=frontend/frontend/dist origin gh-pages
