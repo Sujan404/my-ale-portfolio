@@ -16,13 +16,15 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # Ensure this matches your Vue version
+          path: frontend/frontend
+          node-version: 20  # Ensure this matches your Vue version
+          run: npm install && npm run build
 
-      - name: Install dependencies
-        run: npm install
+    #   - name: Install dependencies
+    #     run: npm install
 
-      - name: Build Vue app
-        run: npm run build
+    #   - name: Build Vue app
+    #     run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
