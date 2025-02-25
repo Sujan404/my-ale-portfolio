@@ -1,0 +1,193 @@
+{
+  "hash": "0923b1b3",
+  "configHash": "ea6577db",
+  "lockfileHash": "a78292a8",
+  "browserHash": "3ded60b5",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "e024d536",
+      "needsInterop": false
+    },
+    "pinia": {
+      "src": "../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "5a0564b9",
+      "needsInterop": false
+    },
+    "@vue/apollo-components": {
+      "src": "../../node_modules/@vue/apollo-components/dist/vue-apollo-components.esm.mjs",
+      "file": "@vue_apollo-components.js",
+      "fileHash": "d52d9b61",
+      "needsInterop": false
+    },
+    "@vue/apollo-composable": {
+      "src": "../../node_modules/@vue/apollo-composable/dist/index.mjs",
+      "file": "@vue_apollo-composable.js",
+      "fileHash": "56fcd5af",
+      "needsInterop": false
+    },
+    "@unhead/vue": {
+      "src": "../../node_modules/@unhead/vue/dist/index.mjs",
+      "file": "@unhead_vue.js",
+      "fileHash": "b2b5ec40",
+      "needsInterop": false
+    },
+    "primevue/config": {
+      "src": "../../node_modules/primevue/config/index.mjs",
+      "file": "primevue_config.js",
+      "fileHash": "1196b332",
+      "needsInterop": false
+    },
+    "primevue/fileupload": {
+      "src": "../../node_modules/primevue/fileupload/index.mjs",
+      "file": "primevue_fileupload.js",
+      "fileHash": "d6e60bd4",
+      "needsInterop": false
+    },
+    "primevue": {
+      "src": "../../node_modules/primevue/index.mjs",
+      "file": "primevue.js",
+      "fileHash": "a9a287d5",
+      "needsInterop": false
+    },
+    "primevue/card": {
+      "src": "../../node_modules/primevue/card/index.mjs",
+      "file": "primevue_card.js",
+      "fileHash": "6cb36063",
+      "needsInterop": false
+    },
+    "primevue/tooltip": {
+      "src": "../../node_modules/primevue/tooltip/index.mjs",
+      "file": "primevue_tooltip.js",
+      "fileHash": "7846575c",
+      "needsInterop": false
+    },
+    "primevue/progressbar": {
+      "src": "../../node_modules/primevue/progressbar/index.mjs",
+      "file": "primevue_progressbar.js",
+      "fileHash": "d45a06d3",
+      "needsInterop": false
+    },
+    "primevue/message": {
+      "src": "../../node_modules/primevue/message/index.mjs",
+      "file": "primevue_message.js",
+      "fileHash": "ff8054b4",
+      "needsInterop": false
+    },
+    "primevue/badge": {
+      "src": "../../node_modules/primevue/badge/index.mjs",
+      "file": "primevue_badge.js",
+      "fileHash": "3c6487a7",
+      "needsInterop": false
+    },
+    "primevue/button": {
+      "src": "../../node_modules/primevue/button/index.mjs",
+      "file": "primevue_button.js",
+      "fileHash": "10bd1b5a",
+      "needsInterop": false
+    },
+    "primevue/toast": {
+      "src": "../../node_modules/primevue/toast/index.mjs",
+      "file": "primevue_toast.js",
+      "fileHash": "666ce1a5",
+      "needsInterop": false
+    },
+    "flowbite": {
+      "src": "../../node_modules/flowbite/lib/esm/index.js",
+      "file": "flowbite.js",
+      "fileHash": "1a5b9415",
+      "needsInterop": false
+    },
+    "@primevue/themes": {
+      "src": "../../node_modules/@primevue/themes/index.mjs",
+      "file": "@primevue_themes.js",
+      "fileHash": "3acd4f91",
+      "needsInterop": false
+    },
+    "@primevue/themes/aura": {
+      "src": "../../node_modules/@primevue/themes/aura/index.mjs",
+      "file": "@primevue_themes_aura.js",
+      "fileHash": "005ba445",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "26a626c3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-AYVSL3LM": {
+      "file": "chunk-AYVSL3LM.js"
+    },
+    "chunk-RNWUNH7L": {
+      "file": "chunk-RNWUNH7L.js"
+    },
+    "chunk-BX7YH5IQ": {
+      "file": "chunk-BX7YH5IQ.js"
+    },
+    "chunk-HXFKAYFF": {
+      "file": "chunk-HXFKAYFF.js"
+    },
+    "chunk-MLUSWXCA": {
+      "file": "chunk-MLUSWXCA.js"
+    },
+    "chunk-JULEFIOZ": {
+      "file": "chunk-JULEFIOZ.js"
+    },
+    "chunk-6ER5CPB2": {
+      "file": "chunk-6ER5CPB2.js"
+    },
+    "chunk-CXETA7UJ": {
+      "file": "chunk-CXETA7UJ.js"
+    },
+    "chunk-NK577GHX": {
+      "file": "chunk-NK577GHX.js"
+    },
+    "chunk-F4VEW5W5": {
+      "file": "chunk-F4VEW5W5.js"
+    },
+    "chunk-JS27F5O4": {
+      "file": "chunk-JS27F5O4.js"
+    },
+    "chunk-3DEXQKBS": {
+      "file": "chunk-3DEXQKBS.js"
+    },
+    "chunk-YJJ4W47L": {
+      "file": "chunk-YJJ4W47L.js"
+    },
+    "chunk-PFPDFNB5": {
+      "file": "chunk-PFPDFNB5.js"
+    },
+    "chunk-VWMUU6XD": {
+      "file": "chunk-VWMUU6XD.js"
+    },
+    "chunk-QX4OJBEE": {
+      "file": "chunk-QX4OJBEE.js"
+    },
+    "chunk-4RAYUS7H": {
+      "file": "chunk-4RAYUS7H.js"
+    },
+    "chunk-GK6O4KBZ": {
+      "file": "chunk-GK6O4KBZ.js"
+    },
+    "chunk-OFFNAEAN": {
+      "file": "chunk-OFFNAEAN.js"
+    },
+    "chunk-3BM5GQJY": {
+      "file": "chunk-3BM5GQJY.js"
+    },
+    "chunk-6PVJNQTO": {
+      "file": "chunk-6PVJNQTO.js"
+    },
+    "chunk-3H4X4HWQ": {
+      "file": "chunk-3H4X4HWQ.js"
+    },
+    "chunk-IJV5NOMV": {
+      "file": "chunk-IJV5NOMV.js"
+    }
+  }
+}
