@@ -1,0 +1,102 @@
+@import './base.css';
+
+@import '/node_modules/flowbite-vue/dist/index.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  font-family: "Roboto Mono", monospace;
+  /* display: flex;
+  place-items: center;
+  font-style: font-sans; */
+}
+
+#app {
+  /* max-width: 1280px; */
+  margin: 0;
+  padding: 0;
+  /* padding: 2rem; */
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+#read-text{
+  color: hsla(160, 100%, 37%, 1);
+}
+
+.copy-code-btn{
+  background-color: hsla(160, 100%, 37%, 1);
+}
+
+.p-fileupload-header{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* padding: 0 2rem; */
+  }
+
+  .body-content{
+    width: 1280px;
+  }
+}
+@media (min-width: 1280px) {
+  .body-content{
+    width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .body-content{
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply animations */
+.toast {
+  animation: fadeIn 1.5s ease-out, fadeOut 1.5s ease-in 2s;
+}
+
+#toast-warning {
+  animation: fadeIn 1.5s ease-out;
+}
