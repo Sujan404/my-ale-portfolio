@@ -8,7 +8,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/my-ale-portfolio/',
   plugins: [
     vue({
       template: {
