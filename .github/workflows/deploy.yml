@@ -18,7 +18,9 @@ jobs:
         with:
           path: frontend/frontend
         #   node-version: 20  # Ensure this matches your Vue version
-          run: npm install && npm run build
+          run: |
+            npm install 
+            npm run build
 
     #   - name: Install dependencies
     #     run: npm install
