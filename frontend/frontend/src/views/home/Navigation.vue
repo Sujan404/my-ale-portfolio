@@ -4,7 +4,7 @@
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 sm:p-6 xl:p-8">
                 <router-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <span class="text-3xl">👀</span>
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sujan Alee</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sujan Ale</span>
                 </router-link>
                 <div class="hidden md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse md:flex">
                     <div v-if="user">
