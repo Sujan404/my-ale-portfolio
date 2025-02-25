@@ -27,4 +27,4 @@ jobs:
     #     run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: git subtree push --prefix=frontend/frontend/dist origin gh-pages
+        run: sudo git subtree push --prefix=frontend/frontend/dist origin gh-pages
