@@ -27,4 +27,8 @@ jobs:
     #     run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: sudo git subtree push --prefix=frontend/frontend/dist origin gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: frontend/frontend/dist  # Path to built Vue files
+          clean: true  # Remove old files before deploying
