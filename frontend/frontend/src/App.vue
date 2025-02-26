@@ -107,11 +107,9 @@ nav a:first-of-type {
 
 <script>
 import { SITE_INFO } from "@/queries";
-import { apolloClient } from "@/apollo-config";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { computed } from 'vue';
-import { userUserStore } from "@/stores/user"
 import { useHead } from '@unhead/vue'
 
 export default {
@@ -126,11 +124,9 @@ export default {
       ],
     });
     const route = useRoute();
-    const userStore = userUserStore();
 
-    const loggedInUser = computed(() => userStore.getUser);
 
-    return { loggedInUser, userStore, route }
+    return { route }
   },
 
   data() {
@@ -163,13 +159,7 @@ export default {
 
     return { showSuccess, showWarning };
   },
-  async created() {
-    // const siteInfo = await apolloClient.query({
-    //   query: SITE_INFO
-    // }
-    // );
-    // this.mySite = siteInfo.data.site;
-  },
+
   methods: {
     async logout() {
       this.userStore.removeToken();
