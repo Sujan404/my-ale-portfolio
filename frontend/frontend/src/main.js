@@ -9,7 +9,7 @@ import { DefaultApolloClient } from '@vue/apollo-composable'
 import { createHead } from '@unhead/vue'
 import PrimeVue from 'primevue/config';
 import FileUpload from 'primevue/fileupload';
-import { ColorPicker } from 'primevue';
+import { Paginator } from 'primevue';
 import Card from 'primevue/card';
 import Tooltip from 'primevue/tooltip';
 import ProgressBar from 'primevue/progressbar';
@@ -46,7 +46,7 @@ app.use(createPinia()).use(head).use(PrimeVue, {
    .component('Badge', Badge)
    .component('Button', Button)
    .component('Toast', Toast)
-   .component('ColorPicker', ColorPicker)
+   .component('Paginator', Paginator)
    .directive('tooltip', Tooltip)
    .component('Card', Card)
    .use(router).use(VueApolloComponents).mount("#app");

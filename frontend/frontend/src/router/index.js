@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BastionHost from '@/views/home/blogs/2024/BastionHost.vue'
+import Proxy from '@/views/home/blogs/2025/Proxy.vue'
 import Docker from '@/views/home/blogs/2024/Docker.vue'
 import HotReloadVueContainer from '@/views/home/blogs/2024/HotReloadVueContainer.vue'
 import VueCatch404 from '@/views/home/blogs/2024/NotFound.vue'
@@ -69,6 +70,11 @@ const router = createRouter({
       path: '/2024/vue-component-seo-csr',
       name: 'VueComponentSEOCSR',
       component: VueComponentSEOCSR
+    },
+    {
+      path: '/2025/proxy-vs-reverse-proxy',
+      name: 'Proxy',
+      component: Proxy
     },
     // Catch-all route for undefined paths
     {

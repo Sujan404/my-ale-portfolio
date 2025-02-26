@@ -106,7 +106,6 @@ nav a:first-of-type {
 </style>
 
 <script>
-import { SITE_INFO } from "@/queries";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { computed } from 'vue';
