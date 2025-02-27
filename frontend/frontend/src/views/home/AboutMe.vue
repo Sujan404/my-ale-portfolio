@@ -25,14 +25,13 @@
         </div>
 
         <div class="max-w-screen-xl mx-auto flex flex-wrap justify-around max-sm:mx-2">
-
             <div v-for="article in currentPageArticles" class="max-w-sm p-6 border border-gray-200 rounded-lg shadow bg-gray-100 dark:border-gray-700 max-sm:my-2">
                 <a href="/2024/vue-component-seo-csr">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{article.title}}</h5>
-                    <p>2{{article.date}} | 4 min read</p>
+                    <p>2{{article.date}} | {{article.readTime}} read</p>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ article.summary }}</p>
-                <router-link :to="{ name: 'VueComponentSEOCSR' }"
+                <router-link :to="{ name: article.routeName }"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Read more
                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -53,13 +52,13 @@ import Pagination from "./Pagination.vue";
 import { ref, computed } from "vue";
 
 const articles = ref([
-    { title: 'Proxy vs Reverse Proxy', date: '2025-02-26', summary: 'Understanding the differences between proxy and reverse proxy servers.' },
-    { title: 'Bastion Host Architecture', date: '2024-10-30', summary: 'Secured access to resources in a private subnet without exposing them to the internet.' },
-    { title: 'Why is Docker So Popular?', date: '2024-10-29', summary: 'Exploring the reasons behind Docker\'s popularity in modern development.' },
-    { title: 'Hot Reloading Vue with Vite in Docker', date: '2024-10-26', summary: 'Implementing hot reload for Vue applications using Vite inside a Docker container.' },
-    { title: 'CSS Flex Importance', date: '2024-10-26', summary: 'The significance of CSS Flexbox in creating responsive layouts.' },
-    { title: 'Vue Catch-All 404 Not Found Route', date: '2024-10-25', summary: 'Implementing a catch-all route in Vue to handle 404 Not Found errors.' },
-    { title: 'SEO for Vue Components in Client-Side Rendering', date: '2024-10-25', summary: 'Add meta tags in vue component that helps search engines understand your content, and helping users find your site and make decision about whether they should visit your site through a search engine.' }
+    { title: 'Proxy vs Reverse Proxy', date: '2025-02-26', readTime:'2 min', routeName:'Proxy', summary: 'Understanding the differences between proxy and reverse proxy servers.' },
+    { title: 'Bastion Host Architecture', date: '2024-10-30',readTime: '2 min', routeName:'BastionHost', summary: 'Secured access to resources in a private subnet without exposing them to the internet.' },
+    { title: 'Why is Docker So Popular?', date: '2024-10-29', readTime: '2 min', routeName: 'Docker', summary: 'Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.' },
+    { title: 'Hot reload the Vue with Vite inside docker container', date: '2024-10-26', readTime: '2 min', routeName: 'HotReloadVueContainer',summary: 'Hot reload has been a manadotory tool for saving time and smooth workflow for developers.' },
+    { title: 'CSS Flex Importance', date: '2024-10-26', readTime:'2 min', routeName:'CssFlex', summary: 'CSS Flexbox is essential for creating flexible, responsive layouts that adjust seamlessly across different screen sizes and devices.' },
+    { title: 'Vue catch all /404 Not Found Route', date: '2024-10-25', readTime: '2 min', routeName:'VueCatch404', summary: 'Display meaningful content instead showing blank white page.' },
+    { title: 'SEO for Vue Components in Client-Side Rendering', date: '2024-10-25', readTime: '4 min', routeName:'VueComponentSEOCSR', summary: 'Add meta tags in vue component that helps search engines understand your content, and helping users find your site and make decision about whether they should visit your site through a search engine.' }
 ]);
 const first = ref(0);
 const rows = ref(3); // Number of items per page
