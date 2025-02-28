@@ -15,7 +15,7 @@
       <h1 class="text-3xl">Proxy vs Reverse Proxy</h1>
       <p id="read-text">2025-02-26 | 2 min read</p>
       <div class="flex justify-between">
-        <div class="relative mr-8 my-5">
+        <div class="relative mr-8 my-5 max-md:hidden">
           <nav class="sticky top-5 bg-gray-100 rounded-xl flex flex-col p-1">
             <div class="bg-blue-500 rounded-xl p-3">
                 <h2 class="text-lg my-3 text-white">Understanding Proxy/Forward Server and Reverse Proxy Server</h2>
@@ -46,7 +46,7 @@
             </a>
         </nav>
         </div>
-        <div class="ml-8">
+        <div class="md:ml-8">
           <div class="flex flex-wrap justify-center my-5">
             <img :src="imgUrl" class="text-center" />
           </div>
