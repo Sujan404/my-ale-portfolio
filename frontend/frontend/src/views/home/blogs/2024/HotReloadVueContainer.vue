@@ -47,13 +47,10 @@
       <h2 class="text-lg my-3">
         <a href="https://vite.dev/config/server-options.html" target="_blank">Vite official site</a>
       </h2>
-      <h2 class="text-lg my-3">
-        <a href="https://www.youtube.com/watch?v=ZCLRgor-WZ8" target="_blank">Hot reload for vue</a>
-      </h2>
-      <div>
+      <div class="flex justify-center my-3">
         <iframe
-          width="966"
-          height="543"
+          width="711"
+          height="400"
           src="https://www.youtube.com/embed/ZCLRgor-WZ8"
           title="How to Dockerize Vue App With Hot Reloading (HRM)"
           frameborder="0"

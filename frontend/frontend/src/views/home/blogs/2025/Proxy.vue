@@ -1,83 +1,383 @@
 <template>
-    <div>
-
-        <Head>
-            <title>Proxy and Reverse Proxy </title>
-            <meta name="og:description" content="Vue catch all /404 Not Found Route">
-            <meta name="og:keywords"
-                content="Software Engineer, Docker, HTML, CSS, Python, Vue, JavaScript, Bastion Host Architecture">
-        </Head>
-        <div class="mb-3">
-            <NavBar />
-        </div>
-        <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
-             <h1 class="text-3xl">
-                Vue catch all /404 Not Found Route
-            </h1>
-            <p id="read-text">2024-10-25 | 2 min read</p>
-            <h2 class="text-lg my-3">
-                It is quite common that we sometimes forget to handle undefined routes. If we do not handle undefined
-                routes, it does not causes error but it results in empty blank page.
-                Instead displaying empty blank page, it is good to display anything meaningful contents.
-            </h2>
-            <h2 class="text-lg my-3">
-                For example: content not found or the route is not defined.
-            </h2>
-            <h1 class="text-xl font-bold">Technical Details</h1>
-            <div class="my-3">
-                <h1 class="text-xl font-bold">Step 1: Create new component and give any name. For my case, I have
-                    created NotFound.vue</h1>
-            </div>
-
-            <!-- source one -->
-            <div class="my-3">
-                <button @click="copyOne" class="relative ml-auto block">
-                    <!-- by default, `copied` will be reset in 1.5s -->
-                    <span v-if="!copiedOne" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
-                    <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
-                </button>
-            </div>
-            <div class="bg-gray-100 overflow-auto">
-                <pre class="px-5 text-indigo-600">
-                    {{ sourceOne }}
-                </pre>
-            </div>
-
-            <!-- source two -->
-            <div class="my-3">
-                <h1 class="text-xl font-bold">Step 2: Import that component in src/router/index.js</h1>
-            </div>
-            
-            <div class="my-3">
-            <button @click="copyTwo" class="relative top-0 ml-auto block">
-                <!-- by default, `copied` will be reset in 1.5s -->
-                <span v-if="!copiedTwo" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
-                <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
-            </button>
-        </div>
-            <div class="bg-gray-100 overflow-auto">
-                <pre class="px-5 text-indigo-600">
-                    {{ sourceTwo }}
-                </pre>
-            </div>
-            <h1 class="my-3">'/:pathMatch(.*)*' => This custom param regexp will match everything and if the route is
-                not found then will redirect to the NotFound.vue.</h1>
-
-            <h1 class="text-xl font-bold">Bottom link provides in-depth information</h1>
-            <h2 class="text-lg my-3">
-                <a href="https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route"
-                    target="_blank">Catch all / 404 Not found Route</a>
-            </h2>
-        </div>
-        <Footer />
+  <div>
+    <Head>
+      <title>Proxy/Forward and Reverse Proxy servers</title>
+      <meta name="og:description" content="Vue catch all /404 Not Found Route" />
+      <meta
+        name="og:keywords"
+        content="Software Engineer, Docker, HTML, CSS, Python, Vue, JavaScript, Bastion Host Architecture"
+      />
+    </Head>
+    <div class="mb-3">
+      <NavBar />
     </div>
+    <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
+      <h1 class="text-3xl">Proxy vs Reverse Proxy</h1>
+      <p id="read-text">2025-02-26 | 2 min read</p>
+      <div class="flex justify-between">
+        <div class="relative mr-8 my-5">
+          <nav class="sticky top-5 bg-gray-100 rounded-xl flex flex-col p-1">
+            <div class="bg-blue-500 rounded-xl p-3">
+                <h2 class="text-lg my-3 text-white">Understanding Proxy/Forward Server and Reverse Proxy Server</h2>
+            </div>
+            <a class="p-3 hover:bg-gray-500 hover:rounded-xl cursor-pointer" href="#overview">
+              <span class="text-lg my-3 hover:bg-gray-500" >Overview</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server">
+              <span class="text-md my-3 hover:bg-gray-500">Forward/Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server-examples">
+              <span class="text-md my-3 hover:bg-gray-500">Examples of Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server-features">
+              <span class="text-md my-3 hover:bg-gray-500">Features and uses of Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server">
+              <span class="text-md my-3 hover:bg-gray-500">Reverse Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server-examples">
+              <span class="text-md my-3 hover:bg-gray-500">Examples of Reverse Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server-features">
+              <span class="text-md my-3 hover:bg-gray-500">Features and uses of Reverse Proxy Server</span>
+            </a>
+            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#conclusion">
+              <span class="text-md my-3 hover:bg-gray-500">Conclusion</span>
+            </a>
+        </nav>
+        </div>
+        <div class="ml-8">
+          <div class="flex flex-wrap justify-center my-5">
+            <img :src="imgUrl" class="text-center" />
+          </div>
+          <div>
+            <div id="overview">
+              <section>
+                <h1 class="text-lg my-3">Overview</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="proxy-server">
+              <section>
+                <h1 class="text-lg my-3">Forward/Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="proxy-server-examples">
+              <section>
+                <h1 class="text-lg my-3">Examples of Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="proxy-server-features">
+              <section>
+                <h1 class="text-lg my-3">Features and uses of Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="reverse-proxy-server">
+              <section>
+                <h1 class="text-lg my-3">Reverse Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="reverse-proxy-server-example">
+              <section>
+                <h1 class="text-lg my-3">Examples of Reverse Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="reverse-proxy-server-features">
+              <section>
+                <h1 class="text-lg my-3">Features and uses of Reverse Proxy Server</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+                <pre>
+                    you 
+
+
+
+
+
+
+
+
+
+
+
+
+                    need to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    scroll
+                  </pre>
+              </section>
+            </div>
+            <div id="conclusion">
+              <section>
+                <h1 class="text-lg my-3">Conclusion</h1>
+                <h2 class="text-lg my-3">
+                  These two words <strong>Proxy/Forward Proxy</strong> and
+                  <strong>Reverse Proxy</strong> are very pouplar words we hear everyday. They are
+                  heavily used in controling web traffics between users and applications servers
+                  creating robust, low latency, and secured connections among users and
+                  applications.
+                </h2>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </div>
 </template>
 <script setup>
-import NavBar from "@/views/home/Navigation.vue";
-import Footer from "@/views/home/Footer.vue";
+import NavBar from '@/views/home/Navigation.vue'
+import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
-import { ref } from "vue";
-import { useClipboard } from "@vueuse/core";
+import { ref } from 'vue'
+import { useClipboard } from '@vueuse/core'
+import imgUrl from '@/assets/images/2025/proxy-vs-reverse-proxy.png'
 
 // Store the code you want to copy in `source`
 const sourceOne = ref(`
@@ -88,7 +388,7 @@ const sourceOne = ref(`
             <router-link class="text-xl" to="/">Go back to Home</router-link>
         </div>
     </div>
-</template>`);
+</template>`)
 
 const sourceTwo = ref(`
 import { createRouter, createWebHistory } from 'vue-router'
@@ -104,22 +404,21 @@ const router = createRouter({
       component: RouteNotFound
     },
   ]
-})`);
+})`)
 const { text, copy, isSupported } = useClipboard()
 
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
 
 const copyOne = () => {
-    copy(sourceOne.value);
-    copiedOne.value = true;
-    setTimeout(() => copiedOne.value = false, 1500); // Reset after 1.5 seconds
+  copy(sourceOne.value)
+  copiedOne.value = true
+  setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyTwo = () => {
-    copy(sourceTwo.value);
-    copiedTwo.value = true;
-    setTimeout(() => copiedTwo.value = false, 1500);
+  copy(sourceTwo.value)
+  copiedTwo.value = true
+  setTimeout(() => (copiedTwo.value = false), 1500)
 }
-
 </script>
