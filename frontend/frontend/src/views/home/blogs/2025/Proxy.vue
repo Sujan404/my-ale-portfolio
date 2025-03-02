@@ -18,33 +18,69 @@
         <div class="relative mr-8 my-5 max-md:hidden">
           <nav class="sticky top-5 bg-gray-100 rounded-xl flex flex-col p-1">
             <div class="bg-blue-500 rounded-xl p-3">
-                <h2 class="text-lg my-3 text-white">Understanding Proxy/Forward Server and Reverse Proxy Server</h2>
+              <h2 class="text-lg my-3 text-white">
+                Understanding Proxy/Forward Server and Reverse Proxy Server
+              </h2>
             </div>
-            <a class="p-3 hover:bg-gray-500 hover:rounded-xl cursor-pointer" href="#overview">
-              <span class="text-lg my-3 hover:bg-gray-500" >Overview</span>
+            <a
+              class="p-3 hover:bg-gray-500 hover:rounded-xl cursor-pointer"
+              href="#overview"
+              :class="activeNav === 'overview' ? 'bg-gray-500 rounded-xl': 'sdf'"
+            >
+              <span class="text-lg my-3 hover:bg-gray-500">Overview</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#proxy-server"
+              :class="activeNav === 'proxy-server' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Forward/Proxy Server</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server-examples">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#proxy-server-examples"
+              :class="activeNav === 'proxy-server-examples' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Examples of Proxy Server</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#proxy-server-features">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#proxy-server-features"
+              :class="activeNav === 'proxy-server-features' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Features and uses of Proxy Server</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#reverse-proxy-server"
+              :class="activeNav === 'reverse-proxy-server' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Reverse Proxy Server</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server-examples">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#reverse-proxy-server-examples"
+              :class="activeNav === 'reverse-proxy-server-examples' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Examples of Reverse Proxy Server</span>
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#reverse-proxy-server-features">
-              <span class="text-md my-3 hover:bg-gray-500">Features and uses of Reverse Proxy Server</span>
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#reverse-proxy-server-features"
+              :class="activeNav === 'reverse-proxy-server-features' ? 'bg-gray-500 rounded-xl': ''"
+            >
+              <span class="text-md my-3 hover:bg-gray-500"
+                >Features and uses of Reverse Proxy Server</span
+              >
             </a>
-            <a class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer" href="#conclusion">
+            <a
+              class="p-3 hover:rounded-xl hover:bg-gray-500 cursor-pointer"
+              href="#conclusion"
+              :class="activeNav === 'conclusion' ? 'bg-gray-500 rounded-xl': ''"
+            >
               <span class="text-md my-3 hover:bg-gray-500">Conclusion</span>
             </a>
-        </nav>
+          </nav>
         </div>
         <div class="md:ml-8">
           <div class="flex flex-wrap justify-center my-5">
@@ -91,7 +127,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="proxy-server">
@@ -134,7 +171,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="proxy-server-examples">
@@ -177,7 +215,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="proxy-server-features">
@@ -220,7 +259,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="reverse-proxy-server">
@@ -263,10 +303,11 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
-            <div id="reverse-proxy-server-example">
+            <div id="reverse-proxy-server-examples">
               <section>
                 <h1 class="text-lg my-3">Examples of Reverse Proxy Server</h1>
                 <h2 class="text-lg my-3">
@@ -306,7 +347,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="reverse-proxy-server-features">
@@ -349,7 +391,8 @@
 
 
                     scroll
-                  </pre>
+                  </pre
+                >
               </section>
             </div>
             <div id="conclusion">
@@ -362,6 +405,26 @@
                   creating robust, low latency, and secured connections among users and
                   applications.
                 </h2>
+                <pre>
+                    asfasf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    afdfds
+                </pre>
               </section>
             </div>
           </div>
@@ -375,10 +438,46 @@
 import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
-import { ref } from 'vue'
+import { onMounted, ref, onUnmounted } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import imgUrl from '@/assets/images/2025/proxy-vs-reverse-proxy.png'
 
+var activeNav = ref('')
+const sections = [
+  'overview',
+  'proxy-server',
+  'proxy-server-examples',
+  'proxy-server-features',
+  'reverse-proxy-server',
+  'reverse-proxy-server-examples',
+  'reverse-proxy-server-features',
+  'conclusion'
+]
+
+onMounted(() => {
+  window.addEventListener('scroll', handleNavBar)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleNavBar)
+})
+
+function handleNavBar() {
+  for (var section of sections) {
+    var element = document.getElementById(section)
+    console.log(element)
+    if (element) {
+      // console.log(element.offsetHeight)
+      // console.log(element.scrollHeight)
+      console.log(element.offsetTop)
+      // console.log(window.scrollY)
+      if (window.scrollY + 100 >= element.offsetTop) {
+        activeNav.value = section
+        console.log('The height is more than offset height')
+      }
+    }
+  }
+}
 // Store the code you want to copy in `source`
 const sourceOne = ref(`
 <template>
