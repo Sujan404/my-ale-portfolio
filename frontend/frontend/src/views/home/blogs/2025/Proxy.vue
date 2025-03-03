@@ -270,7 +270,6 @@ onUnmounted(() => {
 function handleNavBar() {
   for (var section of sections) {
     var element = document.getElementById(section)
-    console.log(element)
     if (element) {
       if (window.scrollY + 100 >= element.offsetTop) {
         activeNav.value = section
