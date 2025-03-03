@@ -52,7 +52,7 @@ import Pagination from "./Pagination.vue";
 import { ref, computed } from "vue";
 
 const articles = ref([
-    { title: 'Proxy vs Reverse Proxy', date: '2025-02-26', readTime:'2 min', routeName:'Proxy', summary: 'Understanding the differences between proxy and reverse proxy servers.' },
+    { title: 'Proxy vs Reverse Proxy', date: '2024-11-07', readTime:'6 min', routeName:'Proxy', summary: 'Understanding the differences between proxy and reverse proxy servers.' },
     { title: 'Bastion Host Architecture', date: '2024-10-30',readTime: '2 min', routeName:'BastionHost', summary: 'Secured access to resources in a private subnet without exposing them to the internet.' },
     { title: 'Why is Docker So Popular?', date: '2024-10-29', readTime: '2 min', routeName: 'Docker', summary: 'Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.' },
     { title: 'Hot reload the Vue with Vite inside docker container', date: '2024-10-26', readTime: '2 min', routeName: 'HotReloadVueContainer',summary: 'Hot reload has been a manadotory tool for saving time and smooth workflow for developers.' },

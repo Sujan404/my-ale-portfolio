@@ -80,7 +80,7 @@
           </div>
           <div>
             <div id="overview">
-              <section class="text-justify">
+              <section>
                 <h1 class="text-xl my-3 font-bold">Overview</h1>
                 <h2 class="text-lg my-3">
                   These two words <strong>Proxy/Forward Proxy</strong> and
@@ -93,7 +93,7 @@
               </section>
             </div>
             <div id="proxy-server">
-              <section class="text-justify">
+              <section>
                 <h1 class="text-xl my-3 font-bold">Forward/Proxy Server</h1>
                 <h2 class="text-lg my-3">
                   Proxy server acts as a middleman between user's computer and the application
@@ -112,23 +112,25 @@
               </section>
             </div>
             <div id="proxy-server-features">
-              <section class="text-justify">
+              <section>
                 <h1 class="text-xl my-3 font-bold">Features of Proxy Server</h1>
                 <ol class="text-lg my-3">
-                  <li>
-                    Content Filtering: Block access to specific websites or categories of content
+                  <li class="my-3">
+                    ● Content Filtering: Block access to specific websites or categories of content
                     based on company policy.
                   </li>
-                  <li>
-                    Internet Access Control: Monitor and restrict employee web browsing activity.
+                  <li class="my-3">
+                    ● Internet Access Control: Monitor and restrict employee web browsing activity.
                   </li>
-                  <li>Anonymity: Hide a user's IP address when accessing the internet (VPN).</li>
-                  <li>
-                    Geo-restricted Content Access: Access content from different regions by routing
+                  <li class="my-3">
+                    ● Anonymity: Hide a user's IP address when accessing the internet (VPN).
+                  </li>
+                  <li class="my-3">
+                    ● Geo-restricted Content Access: Access content from different regions by routing
                     traffic through a proxy in that location.
                   </li>
-                  <li>
-                    Caching Popular Content: Store frequently accessed web content locally to reduce
+                  <li class="my-3">
+                    ● Caching Popular Content: Store frequently accessed web content locally to reduce
                     bandwidth usage.
                   </li>
                 </ol>
@@ -136,7 +138,7 @@
             </div>
             <div id="reverse-proxy-server">
               <section>
-                <h1 class="text-lg my-3 font-bold">Reverse Proxy Server</h1>
+                <h1 class="text-xl my-3 font-bold">Reverse Proxy Server</h1>
                 <h2 class="text-lg my-3">
                   A reverse proxy server functions as an intermediary between users and backend
                   servers. While a proxy server hides a user's IP address from the internet, a
@@ -148,20 +150,20 @@
                   customers call a single public phone number.
                 </h2>
                 <ol class="text-lg my-3">
-                  <li>
-                    The receptionist (reverse proxy) answers all calls and routes them to the
+                  <li class="my-3">
+                    ● The receptionist (reverse proxy) answers all calls and routes them to the
                     appropriate department or representative inside the company.
                   </li>
-                  <li>
-                    The customers (users) never directly interact with the internal employees
+                  <li class="my-3">
+                    ● The customers (users) never directly interact with the internal employees
                     (application servers).
                   </li>
-                  <li>
-                    The real identities and contact details of employees remain hidden, and
+                  <li class="my-3">
+                    ● The real identities and contact details of employees remain hidden, and
                     customers only see the public number of the company.
                   </li>
-                  <li>
-                    The receptionist can also filter spam calls, prioritize VIP customers, or record
+                  <li class="my-3">
+                    ● The receptionist can also filter spam calls, prioritize VIP customers, or record
                     calls for security purposes.
                   </li>
                 </ol>
@@ -169,27 +171,27 @@
             </div>
             <div id="reverse-proxy-server-features">
               <section>
-                <h1 class="text-lg my-3 font-bold">Features and uses of Reverse Proxy Server</h1>
+                <h1 class="text-xl my-3 font-bold">Features and uses of Reverse Proxy Server</h1>
                 <h2 class="text-lg my-3"></h2>
                 <ol class="text-lg my-3">
-                  <li>
-                    Load Balancing: Distribute incoming traffic across multiple web servers to
+                  <li class="my-3">
+                    ● Load Balancing: Distribute incoming traffic across multiple web servers to
                     improve performance and availability.
                   </li>
-                  <li>
-                    Website Security: Filter malicious requests and protect against DDoS attacks
+                  <li class="my-3">
+                    ● Website Security: Filter malicious requests and protect against DDoS attacks
                     before they reach the backend server.
                   </li>
-                  <li>
-                    Content Caching: Cache static website content to reduce server load and improve
+                  <li class="my-3">
+                    ● Content Caching: Cache static website content to reduce server load and improve
                     response times.
                   </li>
-                  <li>
-                    SSL Termination: Decrypt HTTPS traffic at the proxy level, allowing backend
+                  <li class="my-3">
+                    ● SSL Termination: Decrypt HTTPS traffic at the proxy level, allowing backend
                     servers to operate without managing SSL certificates.
                   </li>
-                  <li>
-                    IP Address Masking: Hide the actual IP addresses of backend servers from
+                  <li class="my-3">
+                    ● IP Address Masking: Hide the actual IP addresses of backend servers from
                     clients.
                   </li>
                 </ol>
@@ -197,23 +199,40 @@
             </div>
             <div id="conclusion">
               <section>
-                <h1 class="text-lg my-3 font-bold">Conclusion</h1>
-                <h2 class="text-lg my-3">Here are the main points to remember about Proxy and Reverse Proxy:</h2>
-                <ol class="text-lg my-3">
-                    
-<li>
-A proxy server acts as a middleman between you and the internet. It hides your IP address and provides you with a new one. This helps maintain your online privacy and access geographically restricted content.
+                <h1 class="text-xl my-3 font-bold">Conclusion</h1>
+                <h2 class="text-lg my-3">
+                  After weighing all the points about proxy and reverse proxy servers, each server
+                  has its own features and use case scenarios. With dynamic environment in web
+                  technologies, these two server are highly recommended to utilize to meet desired
+                  goal keeping both the user and server secured and seamless communication with low
+                  latency.
+                </h2>
+                <h2 class="text-lg my-3">
+                  Here are the main points to remember about Proxy and Reverse Proxy:
+                </h2>
+                <ol class="text-lg">
+                  <li class="my-3">
+                    ● A proxy server acts as a middleman between you and the internet. It hides your
+                    IP address and provides you with a new one. This helps maintain your online
+                    privacy and access geographically restricted content. VPN would be a abstract
+                    model that acts as a proxy server.
+                  </li>
+                  <li class="my-3">
+                    ● A reverse proxy stands in front of servers and forwards client requests to those
+                    actual servers. It provides an additional layer of security, load balancing, and
+                    SSL encryption offloading. Nginx would be a ideal abstract model that acts as a
+                    reverse proxy server.
+                  </li>
+                  <li class="my-3">
+                    ● While both forward proxy and reverse proxy servers serve as intermediaries in
+                    the network, they cater to different cases: forward proxies serve the
+                    client-side, and reverse proxies benefit the server side.
+                  </li>
+                  <li class="my-3">
+                    I hope I was able to explain surface level insights about proxy and reverse proxy server.
 
-</li> 
-<li>
-    A reverse proxy stands in front of servers and forwards client requests to those servers. It provides an additional layer of security, load balancing, and SSL encryption offloading.
-
-</li> 
-<li>
-    While both forward proxy and reverse proxy servers serve as intermediaries in the network, they cater to different cases: forward proxies serve the client-side, and reverse proxies benefit the server side.
-</li>              
-</ol>
-               
+                  </li>
+                </ol>
               </section>
             </div>
           </div>
