@@ -16,8 +16,11 @@
       <NavBar />
     </div>
     <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
-      <h1 class="text-3xl">Hot reload the Vue with Vite inside docker container</h1>
-      <p id="read-text">2024-10-26 | 2 min read</p>
+      <h1 class="text-3xl">{{ BLOGS_INFO['hot_reload_vue']['title'] }}</h1>
+      <p id="read-text">
+        {{ BLOGS_INFO['hot_reload_vue']['date'] }} |
+        {{ BLOGS_INFO['hot_reload_vue']['readTime'] }}read
+      </p>
       <h1 class="text-xl font-bold">Vue</h1>
       <h2 class="text-lg my-3">
         It is an open-source model-view-viewmodel front end JavaScript framewoork for building user
@@ -90,6 +93,7 @@ import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
 import { useClipboard } from '@vueuse/core'
+import { BLOGS_INFO } from '@/stores/blogsStore'
 
 // Store the code you want to copy in `source`
 const source = ref(`

@@ -67,64 +67,10 @@
 import imgUrl from '@/assets/images/me/sujan.png'
 import Pagination from './Pagination.vue'
 import { ref, computed } from 'vue'
-import { BLOGS_INFO } from '@/stores/blogsStore'
+import { RENDER_ARTICLES } from '@/views/home/blogs/renderBlogList'
 
-const articles = ref([
-  {
-    title: BLOGS_INFO['proxy']['title'],
-    date: '2024-11-07',
-    readTime: '6 min',
-    routeName: BLOGS_INFO['proxy']['routeName'],
-    summary: BLOGS_INFO['proxy']['summary']
-  },
-  {
-    title: BLOGS_INFO['bastion-host-architecture']['title'],
-    date: '2024-10-30',
-    readTime: '2 min',
-    routeName: BLOGS_INFO['bastion-host-architecture']['routeName'],
-    summary:
-    BLOGS_INFO['bastion-host-architecture']['summary']
-  },
-  {
-    title: 'Why is Docker So Popular?',
-    date: '2024-10-29',
-    readTime: '2 min',
-    routeName: 'Docker',
-    summary:
-      'Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.'
-  },
-  {
-    title: 'Hot reload the Vue with Vite inside docker container',
-    date: '2024-10-26',
-    readTime: '2 min',
-    routeName: 'HotReloadVueContainer',
-    summary:
-      'Hot reload has been a manadotory tool for saving time and smooth workflow for developers.'
-  },
-  {
-    title: 'CSS Flex Importance',
-    date: '2024-10-26',
-    readTime: '2 min',
-    routeName: 'CssFlex',
-    summary:
-      'CSS Flexbox is essential for creating flexible, responsive layouts that adjust seamlessly across different screen sizes and devices.'
-  },
-  {
-    title: 'Vue catch all /404 Not Found Route',
-    date: '2024-10-25',
-    readTime: '2 min',
-    routeName: 'VueCatch404',
-    summary: 'Display meaningful content instead showing blank white page.'
-  },
-  {
-    title: 'SEO for Vue Components in Client-Side Rendering',
-    date: '2024-10-25',
-    readTime: '4 min',
-    routeName: 'VueComponentSEOCSR',
-    summary:
-      'Add meta tags in vue component that helps search engines understand your content, and helping users find your site and make decision about whether they should visit your site through a search engine.'
-  }
-])
+const articles = RENDER_ARTICLES
+
 const first = ref(0)
 const rows = ref(3) // Number of items per page
 

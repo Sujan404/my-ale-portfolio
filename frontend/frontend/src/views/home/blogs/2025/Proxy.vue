@@ -12,8 +12,10 @@
       <NavBar />
     </div>
     <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
-      <h1 class="text-3xl">Proxy vs Reverse Proxy</h1>
-      <p id="read-text">2025-02-26 | 2 min read</p>
+      <h1 class="text-3xl">{{ BLOGS_INFO['proxy']['title'] }}</h1>
+      <p id="read-text">
+        {{ BLOGS_INFO['proxy']['date'] }} | {{ BLOGS_INFO['proxy']['readTime'] }} read
+      </p>
       <div class="flex justify-between">
         <div class="relative mr-8 my-5 max-md:hidden">
           <nav class="sticky top-5 bg-gray-100 rounded-xl flex flex-col p-1">
@@ -126,12 +128,12 @@
                     ● Anonymity: Hide a user's IP address when accessing the internet (VPN).
                   </li>
                   <li class="my-3">
-                    ● Geo-restricted Content Access: Access content from different regions by routing
-                    traffic through a proxy in that location.
+                    ● Geo-restricted Content Access: Access content from different regions by
+                    routing traffic through a proxy in that location.
                   </li>
                   <li class="my-3">
-                    ● Caching Popular Content: Store frequently accessed web content locally to reduce
-                    bandwidth usage.
+                    ● Caching Popular Content: Store frequently accessed web content locally to
+                    reduce bandwidth usage.
                   </li>
                 </ol>
               </section>
@@ -163,8 +165,8 @@
                     customers only see the public number of the company.
                   </li>
                   <li class="my-3">
-                    ● The receptionist can also filter spam calls, prioritize VIP customers, or record
-                    calls for security purposes.
+                    ● The receptionist can also filter spam calls, prioritize VIP customers, or
+                    record calls for security purposes.
                   </li>
                 </ol>
               </section>
@@ -183,8 +185,8 @@
                     before they reach the backend server.
                   </li>
                   <li class="my-3">
-                    ● Content Caching: Cache static website content to reduce server load and improve
-                    response times.
+                    ● Content Caching: Cache static website content to reduce server load and
+                    improve response times.
                   </li>
                   <li class="my-3">
                     ● SSL Termination: Decrypt HTTPS traffic at the proxy level, allowing backend
@@ -218,10 +220,10 @@
                     model that acts as a proxy server.
                   </li>
                   <li class="my-3">
-                    ● A reverse proxy stands in front of servers and forwards client requests to those
-                    actual servers. It provides an additional layer of security, load balancing, and
-                    SSL encryption offloading. Nginx would be a ideal abstract model that acts as a
-                    reverse proxy server.
+                    ● A reverse proxy stands in front of servers and forwards client requests to
+                    those actual servers. It provides an additional layer of security, load
+                    balancing, and SSL encryption offloading. Nginx would be a ideal abstract model
+                    that acts as a reverse proxy server.
                   </li>
                   <li class="my-3">
                     ● While both forward proxy and reverse proxy servers serve as intermediaries in
@@ -229,8 +231,8 @@
                     client-side, and reverse proxies benefit the server side.
                   </li>
                   <li class="my-3">
-                    I hope I was able to explain surface level insights about proxy and reverse proxy server.
-
+                    I hope I was able to explain surface level insights about proxy and reverse
+                    proxy server.
                   </li>
                 </ol>
               </section>
@@ -247,6 +249,7 @@ import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
 import { onMounted, ref, onUnmounted } from 'vue'
+import { BLOGS_INFO } from '@/stores/blogsStore'
 import imgUrl from '@/assets/images/2025/proxy-vs-reverse-proxy.png'
 
 var activeNav = ref('')
