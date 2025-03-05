@@ -2,6 +2,13 @@ import { BLOGS_INFO } from '@/stores/blogsStore'
 import { ref } from 'vue'
 
 const RENDER_ARTICLES = ref([
+    {
+        title: BLOGS_INFO['buildAndRunTimeIntegration']['title'],
+        date: BLOGS_INFO['buildAndRunTimeIntegration']['date'],
+        readTime: BLOGS_INFO['buildAndRunTimeIntegration']['readTime'],
+        routeName: BLOGS_INFO['buildAndRunTimeIntegration']['routeName'],
+        summary: BLOGS_INFO['buildAndRunTimeIntegration']['summary']
+      },
   {
     title: BLOGS_INFO['proxy']['title'],
     date: BLOGS_INFO['proxy']['date'],
