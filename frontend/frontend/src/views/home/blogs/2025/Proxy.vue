@@ -5,7 +5,7 @@
       <meta name="og:description" content="Vue catch all /404 Not Found Route" />
       <meta
         name="og:keywords"
-        content="Software Engineer, Docker, HTML, CSS, Python, Vue, JavaScript, Bastion Host Architecture"
+        content="Software Engineer, Docker, HTML, CSS, Python, Vue, JavaScript, Proxy, Reverse Proxy Server"
       />
     </Head>
     <div class="mb-3">
