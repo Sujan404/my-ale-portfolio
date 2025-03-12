@@ -90,6 +90,25 @@
                     {{ sourceOne }}
                 </pre>
         </div>
+
+        <h2 class="my-2">Add below code in scripts block in <span class="strong-text">Package.json</span></h2>
+        <!-- source one -->
+        <div class="my-3">
+          <button @click="copyTwo" class="relative ml-auto block">
+            <!-- by default, `copied` will be reset in 1.5s -->
+            <span v-if="!copiedTwo" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
+            <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
+          </button>
+        </div>
+        <div class="bg-gray-100 overflow-auto">
+          <pre class="px-5 text-indigo-600">
+                    {{ sourceTwo }}
+                </pre>
+        </div>
+
+        <h2 class="my-2">Add the custom line in build scripts where the <span class="strong-text">fetechPosts.js</span> is located so that
+        it will </h2>
+
         <h2 class="my-2">I have wrote lines of code to fetch data from <a href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
         and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
         <div class="flex flex-wrap justify-center my-5">
@@ -151,6 +170,12 @@ async function fetchData() {
 fetchData();
 `)
 
+const sourceTwo = ref(`
+"scripts": {
+    "dev": "vite",
+    "build": "node src/blog/fetchPosts.js"
+}
+`)
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
 
@@ -158,5 +183,11 @@ const copyOne = () => {
   copy(sourceOne.value)
   copiedOne.value = true
   setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
+}
+
+const copyTwo = () => {
+  copy(sourceTwo.value)
+  copiedTwo.value = true
+  setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
 }
 </script>
