@@ -92,7 +92,9 @@
         </div>
 
         <h2 class="my-2">Add below code in scripts block in <span class="strong-text">Package.json</span></h2>
-        <!-- source one -->
+
+
+        <!-- source Two -->
         <div class="my-3">
           <button @click="copyTwo" class="relative ml-auto block">
             <!-- by default, `copied` will be reset in 1.5s -->
@@ -106,11 +108,28 @@
                 </pre>
         </div>
 
-        <h2 class="my-2">Add the custom line in build scripts where the <span class="strong-text">fetechPosts.js</span> is located so that
-        it will </h2>
+        <h2 class="my-2">Add the custom line in build scripts to run function of <span
+            class="strong-text">fetchPosts.js</span> </h2>
 
-        <h2 class="my-2">I have wrote lines of code to fetch data from <a href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
-        and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
+
+        <!-- source Three -->
+        <div class="my-3">
+          <button @click="copyThree" class="relative ml-auto block">
+            <!-- by default, `copied` will be reset in 1.5s -->
+            <span v-if="!copiedThree" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
+            <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
+          </button>
+        </div>
+        <div class="bg-gray-100 overflow-auto">
+          <pre class="px-5 text-indigo-600">
+                    {{ sourceThree }}
+                </pre>
+        </div>
+
+        <h2 class="my-2">Run the above line of code in terminal to receive data in desginated directory where it is mentioned in the above <span class="strong-text">fetchPosts.js</span></h2>
+        <h2 class="my-2">I have wrote lines of code to fetch data from <a
+            href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
+          and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PublicPostsJson" class="text-center" />
         </div>
@@ -118,7 +137,7 @@
           <img :src="PostsJsonData" class="text-center" />
         </div>
         <h2 class="my-2">These process requires
-        packages likes:
+          packages likes:
         </h2>
         <ul class="my-2">
           <li class="my-2">● fs: </li>
@@ -176,8 +195,14 @@ const sourceTwo = ref(`
     "build": "node src/blog/fetchPosts.js"
 }
 `)
+
+const sourceThree = ref(`
+npm run build
+`)
+
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
+const copiedThree = ref(false)
 
 const copyOne = () => {
   copy(sourceOne.value)
@@ -189,5 +214,11 @@ const copyTwo = () => {
   copy(sourceTwo.value)
   copiedTwo.value = true
   setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
+}
+
+const copyThree = () => {
+  copy(sourceThree.value)
+  copiedThree.value = true
+  setTimeout(() => (copiedThree.value = false), 1500) // Reset after 1.5 seconds
 }
 </script>
