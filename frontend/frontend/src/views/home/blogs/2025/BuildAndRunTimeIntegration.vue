@@ -70,6 +70,15 @@
       <div>
         <h2 class="my-2 font-bold">Technical Details</h2>
         <div class="flex flex-wrap justify-center my-5">
+          <img :src="fileStructure" class="text-center" />
+        </div>
+        <h2 class="my-2">Before directly jumping to code part, the above file structure diagram shows a clear
+          understanding of
+          how the files are organized. This will clarify the paths that are later been mentioned as you keep further
+          read.
+        </h2>
+
+        <div class="flex flex-wrap justify-center my-5">
           <img :src="FetchPostsSample" class="text-center" />
         </div>
         <h2 class="my-2">
@@ -90,10 +99,15 @@
                     {{ sourceOne }}
                 </pre>
         </div>
-
-        <h2 class="my-2">Add below code in scripts block in <span class="strong-text">Package.json</span></h2>
-
-
+        <h2 class="my-2">These process requires
+          packages likes:
+        </h2>
+        <ul class="my-2">
+          <li class="my-2">● fs: <a href="https://www.geeksforgeeks.org/node-js-file-system">Node.js File System</a></li>
+          <li class="my-2">● Axios: <a href="https://medium.com/@reggiecheston/a-beginners-guide-to-using-axios-in-node-js-simplifying-http-requests-441291fef064">Axios</a></li>
+          <li class="my-2">● path: <a href="https://nodejs.org/api/path.html">Path</a></li>
+          <li class="my-2">● url: <a href="https://nodejs.org/api/url.html">Url</a></li>
+        </ul>
         <!-- source Two -->
         <div class="my-3">
           <button @click="copyTwo" class="relative ml-auto block">
@@ -108,6 +122,14 @@
                 </pre>
         </div>
 
+        <h2 class="my-2">Add above code in scripts block in <span class="strong-text">Package.json</span>. Ignore the
+          dev part, just add the build script.</h2>
+
+        <h2 class="my-2">Bear in mind, the above build script has been customized. In my case I have amended that line
+          on existing build scripts but I have not
+          shown the default build script. To get better understanding of npm scripts, please <a
+            href="https://dev.to/paulasantamaria/mastering-npm-scripts-2chd">Click here</a>
+        </h2>
         <h2 class="my-2">Add the custom line in build scripts to run function of <span
             class="strong-text">fetchPosts.js</span> </h2>
 
@@ -126,7 +148,8 @@
                 </pre>
         </div>
 
-        <h2 class="my-2">Run the above line of code in terminal to receive data in desginated directory where it is mentioned in the above <span class="strong-text">fetchPosts.js</span></h2>
+        <h2 class="my-2">Run the above line of code in terminal to receive data in desginated directory where it is
+          mentioned in the above <span class="strong-text">fetchPosts.js</span></h2>
         <h2 class="my-2">I have wrote lines of code to fetch data from <a
             href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
           and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
@@ -136,12 +159,7 @@
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PostsJsonData" class="text-center" />
         </div>
-        <h2 class="my-2">These process requires
-          packages likes:
-        </h2>
-        <ul class="my-2">
-          <li class="my-2">● fs: </li>
-        </ul>
+
       </div>
     </section>
   </div>
@@ -150,6 +168,7 @@
 <script setup>
 import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
+import fileStructure from '@/assets/images/2025/buildAndRunTimeIntegration/file_structure_for_build_and_runtime_integration_blog.png'
 import FetchPostsSample from '@/assets/images/2025/buildAndRunTimeIntegration/fetchPostsSample.png'
 import PublicPostsJson from '@/assets/images/2025/buildAndRunTimeIntegration/publicPostsJson.png'
 import PostsJsonData from '@/assets/images/2025/buildAndRunTimeIntegration/postsJsonData.png'
