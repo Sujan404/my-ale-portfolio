@@ -103,8 +103,11 @@
           packages likes:
         </h2>
         <ul class="my-2">
-          <li class="my-2">● fs: <a href="https://www.geeksforgeeks.org/node-js-file-system">Node.js File System</a></li>
-          <li class="my-2">● Axios: <a href="https://medium.com/@reggiecheston/a-beginners-guide-to-using-axios-in-node-js-simplifying-http-requests-441291fef064">Axios</a></li>
+          <li class="my-2">● fs: <a href="https://www.geeksforgeeks.org/node-js-file-system">Node.js File System</a>
+          </li>
+          <li class="my-2">● Axios: <a
+              href="https://medium.com/@reggiecheston/a-beginners-guide-to-using-axios-in-node-js-simplifying-http-requests-441291fef064">Axios</a>
+          </li>
           <li class="my-2">● path: <a href="https://nodejs.org/api/path.html">Path</a></li>
           <li class="my-2">● url: <a href="https://nodejs.org/api/url.html">Url</a></li>
         </ul>
@@ -125,7 +128,7 @@
         <h2 class="my-2">Add above code in scripts block in <span class="strong-text">Package.json</span>. Ignore the
           dev part, just add the build script.</h2>
 
-        <h2 class="my-2">Bear in mind, the above build script has been customized. In my case I have amended that line
+        <h2 class="my-2">Bear in mind, the above build script has been customized. In my case, I have amended that line
           on existing build scripts but I have not
           shown the default build script. To get better understanding of npm scripts, please <a
             href="https://dev.to/paulasantamaria/mastering-npm-scripts-2chd">Click here</a>
@@ -159,7 +162,8 @@
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PostsJsonData" class="text-center" />
         </div>
-
+        <h2 class="my-2">The above data are retrieved from api during the building process. The building process is done
+          by running <span class="italic">npm run build</span> script.</h2>
       </div>
     </section>
   </div>
