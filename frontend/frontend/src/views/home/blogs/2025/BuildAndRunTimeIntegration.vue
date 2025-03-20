@@ -153,12 +153,26 @@
 
         <h2 class="my-2">Run the above line of code in terminal to receive data in desginated directory where it is
           mentioned in the above <span class="strong-text">fetchPosts.js</span></h2>
-        <h2 class="my-2">I have wrote lines of code to fetch data from <a
-            href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
-          and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PublicPostsJson" class="text-center" />
         </div>
+        <h2 class="my-2">I have wrote lines of code to fetch data from <a
+            href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
+          and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
+        <!-- source Four -->
+        <div class="my-3">
+          <button @click="copyFour" class="relative ml-auto block">
+            <!-- by default, `copied` will be reset in 1.5s -->
+            <span v-if="!copiedFour" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
+            <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
+          </button>
+        </div>
+        <div class="bg-gray-100 overflow-auto">
+          <pre class="px-5 text-indigo-600">
+                    {{ sourceFour }}
+                </pre>
+        </div>
+
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PostsJsonData" class="text-center" />
         </div>
@@ -167,8 +181,46 @@
       </div>
     </section>
 
+    <!-- Run-time Integration -->
     <section class="text-lg">
-      
+      <div>
+        <h2 class="my-3 font-bold">What is Run-Time Integration?</h2>
+        <h2 class="my-3">
+          Run-time integration happens while the application is running. The app dynamically fetches data or interacts
+          with external services as users interact with it.
+        </h2>
+      </div>
+    </section>
+
+    <!-- Example of Run Time Integration -->
+    <section class="text-lg">
+      <div>
+        <h2 class="font-bold">
+          Example: Fetching Data on User Request in Vue.js
+        </h2>
+        <h2 class="my-2">
+          Using Vue with the Composition API, if we want to fetch posts dynamically when a user visits the page, we can
+          do:
+        </h2>
+        <h2 class="my-3">
+          I have used <strong class="strong-text">Vue</strong> and
+          <strong class="strong-text">Vite</strong> as a bundler.
+        </h2>
+      </div>
+    </section>
+
+    <!-- Technical Details for Run Time Integration -->
+    <section class="text-lg">
+      <div>
+        <h2 class="my-2 font-bold">Technical Details</h2>
+        <h2 class="my-2">There will be slight differences while setuping for run-time integration compared to
+          build-time integration. As you can read above where, I have customized build scripts in <span
+            class="strong-text">package.json</span>, created <span class="strong-text">fetchPosts.js</span>
+          to fetch and store
+          in public directory, and run <span class="strong-text italic">npm run build</span>
+          . But for run-time integration, it is different. Let’s get into to see how it is done.
+        </h2>
+      </div>
     </section>
   </div>
   <Footer />
@@ -227,25 +279,49 @@ const sourceThree = ref(`
 npm run build
 `)
 
+const sourceFour = ref(`
+<template>
+    <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
+    <h1 class="text-3xl my-3"> Example of Build Time Integration</h1>
+    <ul>
+    <li class="my-2" v-for="post in posts" :key="post.id">
+        <p>● ID: {{ post.id }}</p>
+        <p>● title: {{ post.title }}</p>
+        <p>● body: {{ post.body }}</p>
+    </li>
+  </ul>
+</div>
+</template>
+<script setup>
+import { ref } from 'vue';
+import posts from '../../../../public/blog/posts.json' 
+`+`</script>`)
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
 const copiedThree = ref(false)
+const copiedFour = ref(false)
 
 const copyOne = () => {
-  copy(sourceOne.value)
-  copiedOne.value = true
-  setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
+copy(sourceOne.value)
+copiedOne.value = true
+setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyTwo = () => {
-  copy(sourceTwo.value)
-  copiedTwo.value = true
-  setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
+copy(sourceTwo.value)
+copiedTwo.value = true
+setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyThree = () => {
-  copy(sourceThree.value)
-  copiedThree.value = true
-  setTimeout(() => (copiedThree.value = false), 1500) // Reset after 1.5 seconds
+copy(sourceThree.value)
+copiedThree.value = true
+setTimeout(() => (copiedThree.value = false), 1500) // Reset after 1.5 seconds
+}
+
+const copyFour = () => {
+copy(sourceFour.value)
+copiedFour.value = true
+setTimeout(() => (copiedFour.value = false), 1500) // Reset after 1.5 seconds
 }
 </script>
