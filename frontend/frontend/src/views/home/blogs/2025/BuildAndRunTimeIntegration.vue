@@ -295,7 +295,7 @@ const sourceFour = ref(`
 <script setup>
 import { ref } from 'vue';
 import posts from '../../../../public/blog/posts.json' 
-`+`</script>`)
+<\/script>`)  // \ (forward slash is used for skipping reserved symbols)
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
 const copiedThree = ref(false)
