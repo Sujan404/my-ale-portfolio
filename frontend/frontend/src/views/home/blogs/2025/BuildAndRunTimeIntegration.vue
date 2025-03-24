@@ -159,6 +159,7 @@
         <h2 class="my-2">I have wrote lines of code to fetch data from <a
             href="https://jsonplaceholder.typicode.com/guide/">Jsonplaceholder</a>
           and stored to a variable and then store in <span class="strong-text">posts.json</span> in public folder. </h2>
+
         <!-- source Four -->
         <div class="my-3">
           <button @click="copyFour" class="relative ml-auto block">
@@ -172,6 +173,9 @@
                     {{ sourceFour }}
                 </pre>
         </div>
+
+        <h2 class="my-2">Create a vue file and paste above code. It fetches data from <span
+            class="strong-text">posts.json</span> then data can be manipulated to display or process any action.</h2>
 
         <div class="flex flex-wrap justify-center my-5">
           <img :src="PostsJsonData" class="text-center" />
@@ -220,6 +224,59 @@
           in public directory, and run <span class="strong-text italic">npm run build</span>
           . But for run-time integration, it is different. Let’s get into to see how it is done.
         </h2>
+
+        <!-- source Five -->
+        <div class="my-3">
+          <button @click="copyFive" class="relative ml-auto block">
+            <!-- by default, `copied` will be reset in 1.5s -->
+            <span v-if="!copiedFive" class="copy-code-btn p-2 rounded-lg font-bold text-white">Copy Code</span>
+            <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
+          </button>
+        </div>
+        <div class="bg-gray-100 overflow-auto">
+          <pre class="px-5 text-indigo-600">
+                    {{ sourceFive }}
+                </pre>
+        </div>
+
+        <h2 class="my-2">Looking over build-time integration, all the data were collected and ready to use before an
+          application is
+          ready to run while in run-time integration, the data are collected on the fly after an application is ready to
+          run.
+          In simple words for above example, the data are collected only when user action hits to the url that is linked
+          to the above page.</h2>
+      </div>
+    </section>
+
+    <!--  key difference between run-time and build-time integration -->
+    <section>
+      <div>
+        <table class="table-auto">
+          <thead>
+            <tr>
+              <th>Song</th>
+              <th>Artist</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+              <td>Malcolm Lockyer</td>
+              <td>1961</td>
+            </tr>
+            <tr>
+              <td>Witchy Woman</td>
+              <td>The Eagles</td>
+              <td>1972</td>
+            </tr>
+            <tr>
+              <td>Shining Star</td>
+              <td>Earth, Wind, and Fire</td>
+              <td>1975</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </div>
@@ -296,32 +353,61 @@ const sourceFour = ref(`
 import { ref } from 'vue';
 import posts from '../../../../public/blog/posts.json' 
 <\/script>`)  // \ (forward slash is used for skipping reserved symbols)
+
+const sourceFive = ref(`
+<template>
+  <ul>
+    <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
+  </ul>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const posts = ref([]);
+
+onMounted(async () => {
+  const res = await fetch('https://api.example.com/posts');
+  posts.value = await res.json();
+});
+<\/script>
+`)    // \ (forward slash is used for skipping reserved symbols)
+
+
 const copiedOne = ref(false)
 const copiedTwo = ref(false)
 const copiedThree = ref(false)
 const copiedFour = ref(false)
+const copiedFive = ref(false)
 
 const copyOne = () => {
-copy(sourceOne.value)
-copiedOne.value = true
-setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
+  copy(sourceOne.value)
+  copiedOne.value = true
+  setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyTwo = () => {
-copy(sourceTwo.value)
-copiedTwo.value = true
-setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
+  copy(sourceTwo.value)
+  copiedTwo.value = true
+  setTimeout(() => (copiedTwo.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyThree = () => {
-copy(sourceThree.value)
-copiedThree.value = true
-setTimeout(() => (copiedThree.value = false), 1500) // Reset after 1.5 seconds
+  copy(sourceThree.value)
+  copiedThree.value = true
+  setTimeout(() => (copiedThree.value = false), 1500) // Reset after 1.5 seconds
 }
 
 const copyFour = () => {
-copy(sourceFour.value)
-copiedFour.value = true
-setTimeout(() => (copiedFour.value = false), 1500) // Reset after 1.5 seconds
+  copy(sourceFour.value)
+  copiedFour.value = true
+  setTimeout(() => (copiedFour.value = false), 1500) // Reset after 1.5 seconds
 }
+
+const copyFive = () => {
+  copy(sourceFive.value)
+  copiedFive.value = true
+  setTimeout(() => (copiedFive.value = false), 1500)  // Reset after 1.5 seconds
+}
+
 </script>
