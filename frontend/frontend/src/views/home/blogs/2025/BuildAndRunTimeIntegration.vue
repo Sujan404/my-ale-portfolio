@@ -249,31 +249,32 @@
     </section>
 
     <!--  key difference between run-time and build-time integration -->
-    <section>
-      <div>
+    <section class="text-lg">
+      <h2 class="font-bold">Comparision</h2>
+      <div class="flex justify-center">
         <table class="table-auto">
           <thead>
             <tr>
-              <th>Song</th>
-              <th>Artist</th>
-              <th>Year</th>
+              <th class="p-3"></th>
+              <th class="p-3">Build Time Integration</th>
+              <th class="p-3">Run Time Integration</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-              <td>Malcolm Lockyer</td>
-              <td>1961</td>
+              <td class="p-3">Data</td>
+              <td class="p-3">Data is fetched once at build time</td>
+              <td class="p-3">Data is fetched on each request</td>
             </tr>
             <tr>
-              <td>Witchy Woman</td>
-              <td>The Eagles</td>
-              <td>1972</td>
+              <td class="p-3">Performance</td>
+              <td class="p-3">Faster, as it serves pre-built content</td>
+              <td class="p-3">Slower, as it makes API calls in real time</td>
             </tr>
             <tr>
-              <td>Shining Star</td>
-              <td>Earth, Wind, and Fire</td>
-              <td>1975</td>
+              <td class="p-3">Use cases</td>
+              <td class="p-3">Blogs, marketing pages, documentation</td>
+              <td class="p-3">Dashboards, user-specific content, live updates</td>
             </tr>
           </tbody>
         </table>
