@@ -100,7 +100,7 @@
                 </pre>
         </div>
         <h2 class="my-2">These process requires
-          packages likes:
+          packages:
         </h2>
         <ul class="my-2">
           <li class="my-2">● fs: <a href="https://www.geeksforgeeks.org/node-js-file-system">Node.js File System</a>
@@ -204,11 +204,7 @@
         </h2>
         <h2 class="my-2">
           Using Vue with the Composition API, if we want to fetch posts dynamically when a user visits the page, we can
-          do:
-        </h2>
-        <h2 class="my-3">
-          I have used <strong class="strong-text">Vue</strong> and
-          <strong class="strong-text">Vite</strong> as a bundler.
+          do.
         </h2>
       </div>
     </section>
