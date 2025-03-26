@@ -251,7 +251,7 @@
     <!--  key difference between run-time and build-time integration -->
     <section class="text-lg">
       <h2 class="font-bold">Comparision</h2>
-      <div class="flex justify-center">
+      <div class="md:flex md:justify-center overflow-x-auto">
         <table class="table-auto">
           <thead>
             <tr>
@@ -278,6 +278,16 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- conclusion -->
+    <section class="text-lg">
+      <div>
+        <h2 class="my-2 font-bold">Conclusion</h2>
+        <h2 class="my-2">Understanding build-time and run-time integration helps optimize performance and user
+          experience in web applications. Choosing the right method depends on your project’s needs. A smart mix of both
+          can provide fast initial loads while keeping data up-to-date in real time!</h2>
       </div>
     </section>
   </div>
