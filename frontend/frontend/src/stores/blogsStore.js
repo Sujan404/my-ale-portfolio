@@ -3,7 +3,7 @@ export const BLOGS_INFO = {
     title: 'Build time and Runtime Integration',
     routeName: 'BuildAndRunTimeIntegration',
     date: '2025-01-12',
-    readTime: '6 min',
+    readTime: '10 min',
     summary: 'Understanding the term build time and runtime integration.'
   },
   proxy: {
