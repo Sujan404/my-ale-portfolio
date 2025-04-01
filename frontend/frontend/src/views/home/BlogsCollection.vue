@@ -21,82 +21,10 @@
                 </div>
                 <div>
                     <ul>
-                        <li class="my-2">
+                        <li class="my-2" v-for="article in currentPageArticles">
                             <div class="flex max-w-screen-xl justify-between">
-                                <p> ● Bastion Host Architecture</p>
-                                <router-link :to="{ name: 'BastionHost' }"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </router-link>
-                            </div>
-                        </li>
-                        <li class="my-2">
-                            <div class="flex max-w-screen-xl justify-between">
-                                <p> ● Why is docker so
-                                    popular?</p>
-                                <router-link :to="{ name: 'Docker' }"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </router-link>
-                            </div>
-                        </li>
-                        <li class="my-2">
-                            <div class="flex max-w-screen-xl justify-between">
-                                <p> ● Hot reload the Vue
-                                    with Vite inside docker container</p>
-                                <router-link :to="{ name: 'HotReloadVueContainer' }"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </router-link>
-                            </div>
-                        </li>
-                        <li class="my-2">
-                            <div class="flex max-w-screen-xl justify-between">
-                                <p> ● CSS Flex importance</p>
-                                <router-link :to="{ name: 'CssFlex' }"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </router-link>
-                            </div>
-                        </li>
-                        <li class="my-2">
-                            <div class="flex max-w-screen-xl justify-between">
-                                <p> ● Vue catch all /404 Not Found Route</p>
-                                <router-link :to="{ name: 'VueCatch404' }"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </router-link>
-                            </div>
-                        </li>
-                        <li class="my-2">
-                            <div class="flex max-w-screen-xl justify-between">
-                                <p> ● SEO for vue components in Client Side Rendering(CSR)</p>
-                                <router-link :to="{ name: 'VueComponentSEOCSR' }"
+                                <p> ● {{article.title}}</p>
+                                <router-link :to="{ name: article.routeName }"
                                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Read more
                                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
@@ -109,6 +37,7 @@
                         </li>
                     </ul>
                 </div>
+                <Pagination :rows="rows" :totalRecords="articles.length" @page="onPageChange"/>
             </div>
         </div>
         <Footer />
@@ -119,4 +48,25 @@
 import NavBar from "@/views/home/Navigation.vue";
 import Footer from "@/views/home/Footer.vue";
 import { Head } from '@unhead/vue/components'
+import { ref, computed } from "vue";
+import Pagination from "./Pagination.vue";
+import { RENDER_ARTICLES } from '@/views/home/blogs/renderBlogList'
+
+const articles = RENDER_ARTICLES
+
+const first = ref(0);
+const rows = ref(10); // Number of items per page
+
+// Compute the current page items
+const currentPageArticles = computed(() => {
+    const start = first.value;
+    const end = start + rows.value;
+    return articles.value.slice(start, end);
+});
+
+// Event handler for page changes
+const onPageChange = (event) => {
+    first.value = event.first;
+    rows.value = event.rows;
+};
 </script>
