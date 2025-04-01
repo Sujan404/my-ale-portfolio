@@ -1,4 +1,12 @@
 export const BLOGS_INFO = {
+  dataStructuresAndAlgorithms: {
+    title: 'Data Structures and Algorithms',
+    routeName: 'dataStructureAlgorithms',
+    date: '2025-02-05',
+    readTime: '5 min',
+    summary:
+      'Data structures and algorithms are fundamental to software development, affecting performance, scalability, and efficiency.'
+  },
   buildAndRunTimeIntegration: {
     title: 'Build time and Runtime Integration',
     routeName: 'BuildAndRunTimeIntegration',
