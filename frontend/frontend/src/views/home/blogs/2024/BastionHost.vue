@@ -29,7 +29,7 @@
         questionable terminology I had in mind about AWS. In this article, I am writing brief
         description about what I have learnt.
       </h2>
-      <ul>
+      <ul class="text-lg">
         <li class="my-2">
           <p>
             ● <span class="font-bold"> Private Cloud (VPC)</span>: It is like a home network where

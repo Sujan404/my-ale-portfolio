@@ -1,6 +1,6 @@
 export const BLOGS_INFO = {
   dataStructuresAndAlgorithms: {
-    title: 'Data Structures and Algorithms',
+    title: 'A Comprehensive Guide to Data Structures and Algorithms',
     routeName: 'dataStructureAlgorithms',
     date: '2025-02-05',
     readTime: '5 min',
