@@ -41,7 +41,7 @@
         <li>
           <p>
             <span class="font-bold">1. Array</span>: A collection of elements identified by index or
-            key. Its usages are Storing lists of data, iterating, sorting, filtering.
+            key. Its usages are storing lists of data, iterating, sorting, filtering.
           </p>
           <!-- source one -->
           <div class="my-3">
@@ -73,6 +73,7 @@ import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
 import { BLOGS_INFO } from '@/stores/blogsStore'
 import { useClipboard } from '@vueuse/core'
+import { ref } from 'vue'
 const { text, copy, isSupported } = useClipboard()
 
 const sourceOne = ref(`
