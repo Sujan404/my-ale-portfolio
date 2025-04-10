@@ -39,7 +39,26 @@
       </h2>
       <ol>
         <li>
-            <p><span class="font-bold">1. Array</span></p>
+          <p>
+            <span class="font-bold">1. Array</span>: A collection of elements identified by index or
+            key. Its usages are Storing lists of data, iterating, sorting, filtering.
+          </p>
+          <!-- source one -->
+          <div class="my-3">
+            <button @click="copyOne" class="relative ml-auto block">
+              <!-- by default, `copied` will be reset in 1.5s -->
+              <span v-if="!copiedOne" class="copy-code-btn p-2 rounded-lg font-bold text-white"
+                >Copy Code</span
+              >
+              <span v-else class="copy-code-btn p-2 rounded-lg font-bold text-white">Copied!</span>
+            </button>
+          </div>
+          <div class="bg-gray-100 overflow-auto">
+            <pre class="px-5 text-indigo-600">
+                    {{ sourceOne }}
+                </pre
+            >
+          </div>
         </li>
       </ol>
     </section>
@@ -53,4 +72,18 @@ import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
 import { BLOGS_INFO } from '@/stores/blogsStore'
+import { useClipboard } from '@vueuse/core'
+const { text, copy, isSupported } = useClipboard()
+
+const sourceOne = ref(`
+let fruits = ["Apple", "Banana", "Cherry"];
+fruits.push("Date"); // Adds 'Date' to the array`)
+
+const copiedOne = ref(false)
+
+const copyOne = () => {
+  copy(sourceOne.value)
+  copiedOne.value = true
+  setTimeout(() => (copiedOne.value = false), 1500) // Reset after 1.5 seconds
+}
 </script>
