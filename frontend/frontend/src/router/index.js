@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import BastionHost from '@/views/home/blogs/2024/BastionHost.vue'
 import Proxy from '@/views/home/blogs/2025/Proxy.vue'
 import BuildAndRunTimeIntegration from '@/views/home/blogs/2025/BuildAndRunTimeIntegration.vue'
+import WordPressVue from '@/views/home/blogs/2025/WordPressVue.vue'
 import Docker from '@/views/home/blogs/2024/Docker.vue'
 import HotReloadVueContainer from '@/views/home/blogs/2024/HotReloadVueContainer.vue'
 import VueCatch404 from '@/views/home/blogs/2024/NotFound.vue'
@@ -81,6 +82,11 @@ const router = createRouter({
       path: '/2025/build-time-and-runtime-integration',
       name: 'BuildAndRunTimeIntegration',
       component: BuildAndRunTimeIntegration
+    },
+    {
+      path: '/2025/WordPressVue',
+      name: 'WordPressVue',
+      component: WordPressVue
     },
     // Catch-all route for undefined paths
     {

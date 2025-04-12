@@ -1,4 +1,11 @@
 export const BLOGS_INFO = {
+  wordPressVue: {
+    title: 'A complete guide to integrate Vue with WordP ress ',
+    routeName: 'WordPressVue',
+    date: '2025-02-10',
+    readTime: '10 min',
+    summary: 'Integrate WordPress with Vue'
+  },
   buildAndRunTimeIntegration: {
     title: 'Build time and Runtime Integration',
     routeName: 'BuildAndRunTimeIntegration',
