@@ -218,7 +218,7 @@
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/template&gt;
+  &lt;\/template&gt;
   
   &lt;script&gt;
   import axios from 'axios'
@@ -261,7 +261,7 @@
     &lt;div v-else&gt;
       Loading...
     &lt;/div&gt;
-  &lt;/template&gt;
+  &lt;\/template&gt;
   
   &lt;script&gt;
   import axios from 'axios'
@@ -399,7 +399,7 @@
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  &lt;/template&gt;
+  &lt;\/template&gt;
   
   &lt;script&gt;
   import { useQuery } from '@vue/apollo-composable'
@@ -608,7 +608,7 @@
         </li>
       </ul>
     </div>
-  </template>
+  <\/template>
   
   <script>
   import axios from 'axios'
