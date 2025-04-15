@@ -1,7 +1,7 @@
 <template>
 
     <Head>
-        <title>Vue.js Integration with WordPress</title>
+        <title>Vue.js Integration with WordPress complete guide</title>
         <meta name="og:description"
             content="How to integrate Vue.js with WordPress for dynamic front-end experiences" />
         <meta name="og:keywords"
