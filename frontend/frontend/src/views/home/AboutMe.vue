@@ -144,7 +144,7 @@ const companies = [
     name: 'GeoTrack',
     url: 'https://www.geotrack.com.np/',
     description:
-      'Specializing in location-based services and GIS solutions for efficient tracking and mapping.',
+      'Specializing in location-based services and Geographic Information System (GIS) solutions for efficient tracking and mapping.',
     bgImage:
       'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
   },
@@ -157,13 +157,21 @@ const companies = [
       'https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'
   },
   {
-    name: 'NIR Nepal',
+    name: 'NIRI Nepal',
     url: 'https://nirinepal.org/',
     description:
       'A non-profit organization focused on research and innovation for sustainable development in Nepal.',
     bgImage:
       'https://plus.unsplash.com/premium_photo-1691735665916-cf31006dffe3?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
+  },
+  {
+    name: 'Three Brothers',
+    url: 'https://threebrothersnepal.com/',
+    description:
+      'Three Brothers Human Resource Pvt. Ltd. (ISO Certificated Company 9001:2015) is a professionally managed organization covering the entire country of Nepal.',
+    bgImage:
+      'https://plus.unsplash.com/premium_photo-1688821131205-52f5c633ce69?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     name: 'Software Shark Tech',
