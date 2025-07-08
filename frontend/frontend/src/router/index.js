@@ -21,7 +21,7 @@ const router = createRouter({
       components: {
         default: NavBar,
         a: AboutMe,
-        b: Footer
+        b: Footer,
       },
       meta: {
         title: 'Home Page - Example App',
