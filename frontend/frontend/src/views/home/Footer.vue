@@ -4,7 +4,7 @@
             <div
                 class="max-w-screen-xl sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 antialiased mx-auto">
                 <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
-                    &copy; {{ new Date().getFullYear()}} <a href="https://www.alesujan.com.np/" class="hover:underline" target="_blank">alesujan.com.np</a>.
+                    &copy; {{ new Date().getFullYear()}} <a href="https://www.alesujan.com.np/" class="hover:underline" target="_blank">www.alesujan.com.np</a>.
                     All rights reserved.
                 </p>
                 <div class="flex justify-center items-center space-x-1">
