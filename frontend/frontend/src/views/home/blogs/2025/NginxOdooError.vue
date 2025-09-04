@@ -75,9 +75,11 @@
     <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
       <div class="mb-6">
         <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4">
-          Solving the Docker Nginx, Odoo, and Database Cascade Error
+          {{ BLOGS_INFO['odoo_error']['title'] }}
         </h1>
-        <p class="text-sm sm:text-base text-gray-600 mb-4">September 4, 2025 | 8 min read</p>
+        <p class="text-sm sm:text-base text-gray-600 mb-4">
+          {{ BLOGS_INFO['odoo_error']['date'] }}| {{ BLOGS_INFO['odoo_error']['readTime'] }}
+        </p>
       </div>
 
       <div class="flex flex-col lg:flex-row justify-between gap-8">
@@ -103,15 +105,6 @@
 
         <!-- Main Content -->
         <div class="flex-1 min-w-0">
-          <!-- Hero Image -->
-          <div class="mb-8">
-            <img
-              :src="imgUrl"
-              class="w-full max-w-2xl mx-auto rounded-lg shadow-md"
-              alt="Diagram illustrating the dependencies and failure points of a Dockerized Nginx, Odoo, and Certbot setup."
-            />
-          </div>
-
           <!-- Content Sections -->
           <div class="prose prose-lg max-w-none">
             <section id="problem-statement" class="mb-12">
@@ -160,8 +153,7 @@
               <p class="text-base sm:text-lg mb-4 leading-relaxed">
                 <strong>Error Message:</strong>
                 <code class="bg-gray-100 px-2 py-1 rounded text-sm"
-                  >cannot load certificate
-                  "/etc/letsencrypt/live/testing.softwaresharktech.com/fullchain.pem"</code
+                  >cannot load certificate "/etc/letsencrypt/live/example.com/fullchain.pem"</code
                 >
               </p>
               <p class="text-base sm:text-lg mb-4 leading-relaxed">
@@ -265,8 +257,8 @@
                 fundamental for Odoo's operation. Its absence meant the database was connected but
                 not yet provisioned. The
                 <code class="bg-gray-100 px-2 py-1 rounded text-sm">ERROR</code> log confirmed this.
-                The hint was also in the initial Odoo log: "Database geo_tracker_db_18_new not
-                initialized, you can force it with
+                The hint was also in the initial Odoo log: "Database example_db not initialized, you
+                can force it with
                 <code class="bg-gray-100 px-2 py-1 rounded text-sm">-i base</code>".
               </p>
               <p class="text-base sm:text-lg leading-relaxed">
@@ -305,7 +297,12 @@
                 <code class="bg-gray-100 px-2 py-1 rounded text-sm">certbot</code>
                 container first, then start the rest of the stack.
               </p>
-
+              <p class="text-base sm:text-lg mb-6 leading-relaxed">
+                I have generate SSL certificate within docker container where nginx communicate with
+                cerbot container.
+                <a href="https://github.com/wmnnd/nginx-certbot/tree/master">Click here</a> to view
+                the source code how to setup the docker container to generate SSL certificate.
+              </p>
               <h3 class="text-lg sm:text-xl font-bold mb-4 text-gray-800">
                 2. Solving the Odoo Permission Error
               </h3>
@@ -414,7 +411,7 @@ import { Head } from '@unhead/vue/components'
 import { BLOGS_INFO } from '@/stores/blogsStore'
 
 const logSource =
-  ref(`2025/08/27 14:05:43 [emerg] 14#14: cannot load certificate "/etc/letsencrypt/live/testing.softwaresharktech.com/fullchain.pem": BIO_new_file() failed... 
+  ref(`2025/08/27 14:05:43 [emerg] 14#14: cannot load certificate "/etc/letsencrypt/live/example.com/fullchain.pem": BIO_new_file() failed... 
 PermissionError: [Errno 13] Permission denied: '/var/lib/odoo/sessions' 
 ERROR: relation "ir_module_module" does not exist`)
 
@@ -436,7 +433,7 @@ services:
 odoo:
 # ...
 command: >
-odoo-bin -c /usr/src/app/odoo/odoo.conf --limit-time-cpu=60 --limit-time-real=120 --db-filter=^geo_tracker_db_18_new$ -i base`)
+odoo-bin -c /usr/src/app/odoo/odoo.conf --limit-time-cpu=60 --limit-time-real=120 --db-filter=^example_db$ -i base`)
 
 const { text, copy, copied, isSupported } = useClipboard()
 

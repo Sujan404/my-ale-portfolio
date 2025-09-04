@@ -59,5 +59,13 @@ export const BLOGS_INFO = {
     readTime: '4 min',
     summary:
       'Add meta tags in vue component that helps search engines understand your content, and helping users find your site and make decision about whether they should visit your site through a search engine.'
+  },
+  odoo_error: {
+    title: 'Solving the Docker Nginx, Odoo, and Database Cascade Error',
+    routeName: 'NginxOdooError',
+    date: '2025-09-25',
+    readTime: '8 min',
+    summary:
+      'A detailed, technical guide on debugging and resolving a complex series of Docker errors involving Nginx certificate failures, Odoo permission issues, and an uninitialized PostgreSQL database.'
   }
 }
