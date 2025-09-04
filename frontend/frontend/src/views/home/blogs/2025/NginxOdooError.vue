@@ -150,11 +150,11 @@
               <p class="text-base sm:text-lg mb-4 leading-relaxed">
                 The Nginx error was the first to appear and, fortunately, the most straightforward.
               </p>
-              <p class="text-base sm:text-lg mb-4 leading-relaxed">
+              <p class="text-base sm:text-lg mb-4 leading-relaxed flex flex-wrap items-baseline">
                 <strong>Error Message:</strong>
-                <code class="bg-gray-100 px-2 py-1 rounded text-sm"
-                  >cannot load certificate "/etc/letsencrypt/live/example.com/fullchain.pem"</code
-                >
+                <code class="bg-gray-100 px-2 py-1 rounded text-sm break-all whitespace-normal">
+                  cannot load certificate "/etc/letsencrypt/live/example.com/fullchain.pem"
+                </code>
               </p>
               <p class="text-base sm:text-lg mb-4 leading-relaxed">
                 This error indicated that Nginx was looking for an SSL certificate file that didn't
