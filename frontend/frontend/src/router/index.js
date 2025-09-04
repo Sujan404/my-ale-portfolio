@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BastionHost from '@/views/home/blogs/2024/BastionHost.vue'
 import Proxy from '@/views/home/blogs/2025/Proxy.vue'
+import NginxOdooError from '@/views/home/blogs/2025/NginxOdooError.vue'
 import BuildAndRunTimeIntegration from '@/views/home/blogs/2025/BuildAndRunTimeIntegration.vue'
 import Docker from '@/views/home/blogs/2024/Docker.vue'
 import HotReloadVueContainer from '@/views/home/blogs/2024/HotReloadVueContainer.vue'
@@ -81,6 +82,11 @@ const router = createRouter({
       path: '/2025/build-time-and-runtime-integration',
       name: 'BuildAndRunTimeIntegration',
       component: BuildAndRunTimeIntegration
+    },
+    {
+      path: '/2025/nginx-odoo-error',
+      name: 'NginxOdooError',
+      component: NginxOdooError
     },
     // Catch-all route for undefined paths
     {
