@@ -95,8 +95,8 @@
                 </ul>
                 <h3 class="text-xl font-semibold mb-4">Basic Syntax</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>command << DELIMITER
+                  <button @click="copyCode($refs.basicSyntax)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="basicSyntax"><code>command << DELIMITER
 content line 1
 content line 2
 content line 3
@@ -114,8 +114,8 @@ DELIMITER</code></pre>
                 </p>
                 <h3 class="text-xl font-semibold mb-4">Basic EOF Example</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.eofExample)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="eofExample"><code>#!/bin/bash
 cat << EOF > output.txt
 This is line 1
 This is line 2
@@ -136,8 +136,8 @@ EOF</code></pre>
                 </p>
                 <h3 class="text-xl font-semibold mb-4">Unquoted EOF (Variable Expansion Enabled)</h3>
                 <div class="relative mb-4">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.unquotedEof)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="unquotedEof"><code>#!/bin/bash
 USERNAME="admin"
 cat << EOF
 Welcome $USERNAME!
@@ -150,8 +150,8 @@ EOF</code></pre>
                 </p>
                 <h3 class="text-xl font-semibold mb-4">Quoted EOF (Literal Text)</h3>
                 <div class="relative mb-4">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.quotedEof)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="quotedEof"><code>#!/bin/bash
 USERNAME="admin"
 cat << 'EOF'
 Welcome $USERNAME!
@@ -176,8 +176,8 @@ EOF</code></pre>
                   Here's how HereDoc solves the classic cloud architecture challenge of accessing private resources through a bastion host:
                 </p>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.bastionHost)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="bastionHost"><code>#!/bin/bash
 BASTION_HOST="bastion.company.com"
 PRIVATE_SERVER="10.0.1.100"
 APP_VERSION="v2.1.0"
@@ -199,8 +199,8 @@ EOF</code></pre>
                 </div>
                 <h3 class="text-xl font-semibold mb-4">2. Dynamic Configuration File Generation</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.configFile)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="configFile"><code>#!/bin/bash
 DB_HOST="prod-db.company.com"
 DB_NAME="production"
 API_KEY="abc123def456"
@@ -222,8 +222,8 @@ EOF</code></pre>
                 </div>
                 <h3 class="text-xl font-semibold mb-4">3. Docker Container Management</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.dockerManagement)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="dockerManagement"><code>#!/bin/bash
 CONTAINER_NAME="webapp"
 IMAGE_TAG="latest"
 
@@ -258,8 +258,8 @@ EOF</code></pre>
                 </div>
                 <h3 class="text-xl font-semibold mb-4">Basic Nested Example</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.basicNested)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="basicNested"><code>#!/bin/bash
 
 # Create individual log files
 cat << EOF > file1.log
@@ -295,8 +295,8 @@ EOF</code></pre>
                   Here's a more complex example that demonstrates creating a Docker Compose file with embedded configuration:
                 </p>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.advancedNested)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="advancedNested"><code>#!/bin/bash
 APP_NAME="mywebapp"
 DB_PASSWORD="secure_password_123"
 NGINX_CONFIG_PATH="/etc/nginx/nginx.conf"
@@ -348,8 +348,8 @@ EOF</code></pre>
                 </p>
                 <h3 class="text-xl font-semibold mb-4">Automated Volume Cleanup Script</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.volumeCleanup)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="volumeCleanup"><code>#!/bin/bash
 
 # Function to clean unused Docker resources
 cleanup_docker() {
@@ -382,8 +382,8 @@ cleanup_docker</code></pre>
                 </div>
                 <h3 class="text-xl font-semibold mb-4">Volume Status Check</h3>
                 <div class="relative mb-6">
-                  <button @click="copyCode(this)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
-                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>#!/bin/bash
+                  <button @click="copyCode($refs.volumeStatus)" class="absolute top-2 right-2 bg-gray-600 hover:bg-gray-500 text-white px-3 py-1 rounded text-xs copy-btn">Copy</button>
+                  <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto" ref="volumeStatus"><code>#!/bin/bash
 
 # Generate volume report using HereDoc
 cat << EOF > docker-volume-report.txt
@@ -392,7 +392,7 @@ Generated: $(date)
 ==================
 
 Active Volumes:
-$(docker volume ls --format table ")
+
 
 Unused Volumes:
 $(docker volume ls -q -f dangling=true)
@@ -416,14 +416,14 @@ echo "Volume report generated: docker-volume-report.txt"</code></pre>
                   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-red-600 mb-3">❌ Pitfall 1: Indented EOF Delimiter</h3>
                     <div class="relative mb-4">
-                      <pre class="bg-red-50 text-red-800 p-3 rounded"><code># This will NOT work
+                      <pre class="bg-red-50 text-red-800 p-3 rounded overflow-x-auto" ref="pitfall1"><code># This will NOT work
 cat << EOF
     Content here
-    EOF  # ← This is indented and will cause an error!</code></pre>
+    EOF # ← This is indented and will cause an error!</code></pre>
                     </div>
                     <h4 class="text-sm font-semibold text-green-600 mb-2">✅ Solution:</h4>
                     <div class="relative">
-                      <pre class="bg-green-50 text-green-800 p-3 rounded"><code># This WILL work
+                      <pre class="bg-green-50 text-green-800 p-3 rounded overflow-x-auto" ref="pitfall1Solution"><code># This WILL work
 cat << EOF
     Content here
 EOF</code></pre>
@@ -432,7 +432,7 @@ EOF</code></pre>
                   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-red-600 mb-3">❌ Pitfall 2: Missing Space in Nested Delimiters</h3>
                     <div class="relative mb-4">
-                      <pre class="bg-red-50 text-red-800 p-3 rounded"><code># This will cause confusion
+                      <pre class="bg-red-50 text-red-800 p-3 rounded overflow-x-auto" ref="pitfall2"><code># This will cause confusion
 cat << EOF
 $(cat << NESTED_EOF # ← No space, hard to read
 content
@@ -441,7 +441,7 @@ EOF</code></pre>
                     </div>
                     <h4 class="text-sm font-semibold text-green-600 mb-2">✅ Solution:</h4>
                     <div class="relative">
-                      <pre class="bg-green-50 text-green-800 p-3 rounded"><code># This is clear and correct
+                      <pre class="bg-green-50 text-green-800 p-3 rounded" ref="pitfall2Solution"><code># This is clear and correct
 cat << EOF
 $(cat << NESTED_EOF
 content
@@ -453,7 +453,7 @@ EOF</code></pre>
                   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <h3 class="text-lg font-semibold text-red-600 mb-3">❌ Pitfall 3: Unintended Variable Expansion</h3>
                     <div class="relative mb-4">
-                      <pre class="bg-red-50 text-red-800 p-3 rounded"><code># Variables get expanded when you don't want them to
+                      <pre class="bg-red-50 text-red-800 p-3 rounded overflow-x-auto" ref="pitfall3"><code># Variables get expanded when you don't want them to
 cat << EOF > script.sh
 #!/bin/bash
 echo "User is $USER" # ← $USER gets expanded immediately
@@ -461,7 +461,7 @@ EOF</code></pre>
                     </div>
                     <h4 class="text-sm font-semibold text-green-600 mb-2">✅ Solution:</h4>
                     <div class="relative">
-                      <pre class="bg-green-50 text-green-800 p-3 rounded"><code># Use quoted delimiter to preserve literal text
+                      <pre class="bg-green-50 text-green-800 p-3 rounded overflow-x-auto" ref="pitfall3Solution"><code># Use quoted delimiter to preserve literal text
 cat << 'EOF' > script.sh
 #!/bin/bash
 echo "User is $USER" # ← $USER preserved as literal text
@@ -518,49 +518,77 @@ EOF</code></pre>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BashHereDoc',
-  data() {
-    return {
-      isMobileTocHidden: true,
-      sections: [],
-    };
-  },
-  mounted() {
-    this.generateToc();
-  },
-  methods: {
-    generateToc() {
-      const sections = document.querySelectorAll('section[id]');
-      this.sections = Array.from(sections).map(section => ({
-        id: section.id,
-        title: section.querySelector('h2').innerText,
-      }));
-    },
-    toggleMobileToc() {
-      this.isMobileTocHidden = !this.isMobileTocHidden;
-      document.body.style.overflow = this.isMobileTocHidden ? 'auto' : 'hidden';
-    },
-    closeMobileToc() {
-      this.isMobileTocHidden = true;
-      document.body.style.overflow = 'auto';
-    },
-    copyCode(button) {
-      const pre = button.nextElementSibling;
-      const code = pre.querySelector('code').innerText;
-      navigator.clipboard.writeText(code).then(() => {
+<script setup>
+import { ref, onMounted } from 'vue';
+
+// State Management
+const isMobileTocHidden = ref(true);
+const sections = ref([]);
+
+// Dynamic Code Block Refs
+const basicSyntax = ref(null);
+const eofExample = ref(null);
+const unquotedEof = ref(null);
+const quotedEof = ref(null);
+const bastionHost = ref(null);
+const configFile = ref(null);
+const dockerManagement = ref(null);
+const basicNested = ref(null);
+const advancedNested = ref(null);
+const volumeCleanup = ref(null);
+const volumeStatus = ref(null);
+const pitfall1 = ref(null);
+const pitfall1Solution = ref(null);
+const pitfall2 = ref(null);
+const pitfall2Solution = ref(null);
+const pitfall3 = ref(null);
+const pitfall3Solution = ref(null);
+
+// Methods
+const generateToc = () => {
+  const allSections = document.querySelectorAll('section[id]');
+  sections.value = Array.from(allSections).map(section => ({
+    id: section.id,
+    title: section.querySelector('h2').innerText,
+  }));
+};
+
+const toggleMobileToc = () => {
+  isMobileTocHidden.value = !isMobileTocHidden.value;
+  document.body.style.overflow = isMobileTocHidden.value ? 'auto' : 'hidden';
+};
+
+const closeMobileToc = () => {
+  isMobileTocHidden.value = true;
+  document.body.style.overflow = 'auto';
+};
+
+const copyCode = (preElement) => {
+  if (preElement && preElement.querySelector('code')) {
+    const code = preElement.querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      // Find the copy button associated with this pre element
+      const button = preElement.previousElementSibling;
+      if (button) {
         button.textContent = 'Copied!';
         setTimeout(() => {
           button.textContent = 'Copy';
         }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy text: ', err);
+      }
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+      const button = preElement.previousElementSibling;
+      if (button) {
         button.textContent = 'Error!';
-      });
-    },
-  },
+      }
+    });
+  }
 };
+
+// Lifecycle Hook
+onMounted(() => {
+  generateToc();
+});
 </script>
 
 <style scoped>
@@ -569,32 +597,33 @@ This section is optional, as the Tailwind CSS classes handle most of the styling
 However, you can add any component-specific styles here if needed.
 */
 .prose {
-    color: #374151;
+  color: #374151;
 }
 .prose h1,
 .prose h2,
 .prose h3 {
-    color: #111827;
+  color: #111827;
 }
 .prose h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
 }
 .prose code {
-    /* background-color: #f3f4f6; */
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
-    font-size: 0.875em;
-    font-weight: 600;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 600;
 }
 pre {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    line-height: 1.4;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  line-height: 1.4;
+  background-color: #111827; /* Tailwind's gray-900 */
+  color: #f3f4f6; /* Tailwind's gray-100 */
 }
 .copy-btn {
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .copy-btn:hover {
-    background-color: #4b5563;
+  background-color: #4b5563;
 }
 </style>
