@@ -3,6 +3,13 @@ import { ref } from 'vue'
 
 const RENDER_ARTICLES = ref([
   {
+    title: BLOGS_INFO['bash_here_doc']['title'],
+    date: BLOGS_INFO['bash_here_doc']['date'],
+    readTime: BLOGS_INFO['bash_here_doc']['readTime'],
+    routeName: BLOGS_INFO['bash_here_doc']['routeName'],
+    summary: BLOGS_INFO['bash_here_doc']['summary']
+  },
+  {
     title: BLOGS_INFO['odoo_error']['title'],
     date: BLOGS_INFO['odoo_error']['date'],
     readTime: BLOGS_INFO['odoo_error']['readTime'],

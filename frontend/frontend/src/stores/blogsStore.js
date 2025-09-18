@@ -63,9 +63,16 @@ export const BLOGS_INFO = {
   odoo_error: {
     title: 'Solving the Docker Nginx, Odoo, and Database Cascade Error',
     routeName: 'NginxOdooError',
-    date: '2025-09-25',
+    date: '2025-08-25',
     readTime: '8 min',
     summary:
       'A detailed, technical guide on debugging and resolving a complex series of Docker errors involving Nginx certificate failures, Odoo permission issues, and an uninitialized PostgreSQL database.'
+  },
+  bash_here_doc: {
+    title: 'Mastering Bash HereDoc: A Complete Guide for System Administrators',
+    routeName: 'BashHereDoc',
+    date: '2025-09-15',
+    readTime: '10 min',
+    summary: `As a system administrator working with complex cloud architectures, you've probably faced the challenge of executing multiple commands across different servers in a single shell script. Enter Bash HereDoc - a powerful feature that can transform how you handle multi-line input and streamline your automation workflows.`
   }
 }
