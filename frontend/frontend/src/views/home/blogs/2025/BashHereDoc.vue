@@ -584,7 +584,7 @@ Generated: $(date)
 ==================
 
 Active Volumes:
-
+$(docker volume ls)
 
 Unused Volumes:
 $(docker volume ls -q -f dangling=true)
