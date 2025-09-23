@@ -6,24 +6,25 @@ To get a local copy of this project up and running, follow these simple steps.
 
 # Prerequisites
 Make sure you have Node.js and npm installed on your machine.
-npm
-
-Bash
-
+```bash
 npm install npm@latest -g
 
 # Installation
 1. Clone the repository:
+```bash
 git clone https://github.com/Sujan404/my-ale-portfolio.git
 
 2. Navigate to the project directory:
+```bash
 cd my-ale-portfolio
 
 3. Install the dependencies:
+```bash
 npm install
 
 # Running the Project
 To run the site locally in development mode, use the following command:
+```bash
 npm run dev
 
 This will start a local server, and you can view the site in your browser at http://localhost:5173. Any changes you make to the code will hot-reload automatically.
