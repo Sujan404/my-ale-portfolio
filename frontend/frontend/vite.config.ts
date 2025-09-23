@@ -52,13 +52,7 @@ function copy404Plugin(): Plugin {
 export default defineConfig({
   // base: '/my-ale-portfolio/',
   plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => ['UseDraggable'].includes(tag)
-        }
-      }
-    }),
+    vue(),
     vueJsx(),
     UnheadVite(),
     copy404Plugin(), // Add the 404 copy plugin
