@@ -3,6 +3,13 @@ import { ref } from 'vue'
 
 const RENDER_ARTICLES = ref([
   {
+    title: BLOGS_INFO['cloudflare_redirect_rules']['title'],
+    date: BLOGS_INFO['cloudflare_redirect_rules']['date'],
+    readTime: BLOGS_INFO['cloudflare_redirect_rules']['readTime'],
+    routeName: BLOGS_INFO['cloudflare_redirect_rules']['routeName'],
+    summary: BLOGS_INFO['cloudflare_redirect_rules']['summary']
+  },
+  {
     title: BLOGS_INFO['bash_here_doc']['title'],
     date: BLOGS_INFO['bash_here_doc']['date'],
     readTime: BLOGS_INFO['bash_here_doc']['readTime'],

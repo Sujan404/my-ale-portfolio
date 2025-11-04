@@ -74,5 +74,13 @@ export const BLOGS_INFO = {
     date: '2025-09-15',
     readTime: '10 min',
     summary: `As a system administrator working with complex cloud architectures, you've probably faced the challenge of executing multiple commands across different servers in a single shell script. Enter Bash HereDoc - a powerful feature that can transform how you handle multi-line input and streamline your automation workflows.`
+  },
+  cloudflare_redirect_rules: {
+    title: 'Mastering Cloudflare DNS & Redirect Rules: A Complete Guide for Multi-Domain Management',
+    routeName: 'CloudflareRedirectRules',
+    date: '2025-11-04',
+    readTime: '10 min',
+    summary:
+      'A complete technical guide for developers and system administrators on mastering Cloudflare DNS, Redirect Rules, Expressions, SSL, multi-domain management, and advanced redirect logic.'
   }
 }
