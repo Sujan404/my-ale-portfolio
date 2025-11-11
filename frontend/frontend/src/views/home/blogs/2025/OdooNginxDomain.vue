@@ -74,7 +74,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-8">
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-            Complete Guide: Troubleshooting Docker, Nginx, and Let's Encrypt SSL
+            {{ BLOGS_INFO['odoo_nginx_domin']['title'] }}
           </h1>
           <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium"
@@ -89,7 +89,7 @@
             <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium"
               >Troubleshooting</span
             >
-            <span>November 2025 | 15 min read</span>
+            <span>{{ BLOGS_INFO['odoo_nginx_domin']['date'] }} | {{ BLOGS_INFO['odoo_error']['readTime'] }}</span>
           </div>
         </div>
 
@@ -1096,6 +1096,7 @@ import { ref, onMounted } from 'vue'
 import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
+import { BLOGS_INFO } from '@/stores/blogsStore'
 
 // State Management
 const isMobileTocHidden = ref(true)
