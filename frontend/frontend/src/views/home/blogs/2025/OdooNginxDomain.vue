@@ -1057,6 +1057,9 @@ echo "🎉 Deployment complete!"</code></pre>
                 <section id="conclusion" class="mb-12">
                   <h2 class="text-2xl sm:text-3xl font-bold mb-6">Conclusion</h2>
                   <p class="text-lg leading-relaxed mb-4">
+                    I have been working through the challenges of deploying Odoo with Nginx and SSL in Docker containers, and I wanted to share the solutions I've found to common pitfalls. Having said that, the issues I have faced could be different for others depending on their specific environment and configurations.
+                  </p>
+                  <p class="text-lg leading-relaxed mb-4">
                     Deploying containerized applications with proper SSL configuration doesn't have to be a nightmare. The key lessons from this troubleshooting journey are:
                   </p>
                   <ol class="list-decimal pl-6 mb-6 space-y-3 text-lg">
