@@ -74,5 +74,12 @@ export const BLOGS_INFO = {
     date: '2025-09-15',
     readTime: '10 min',
     summary: `As a system administrator working with complex cloud architectures, you've probably faced the challenge of executing multiple commands across different servers in a single shell script. Enter Bash HereDoc - a powerful feature that can transform how you handle multi-line input and streamline your automation workflows.`
+  },
+  odoo_nginx_domin: {
+    title: `Complete Guide: Troubleshooting Docker, Nginx, and Let's Encrypt SSL Certificate Issues`,
+    routeName: 'OdooNginxDomain',
+    date: '2025-10-11',
+    readTime: '15 min',
+    summary: `A comprehensive guide to resolving common Docker containerization issues, Nginx configuration problems, and Let's Encrypt SSL certificate generation failures. Learn how to debug connection refused errors, fix PostgreSQL permissions, and successfully deploy Odoo with HTTPS.`
   }
 }
