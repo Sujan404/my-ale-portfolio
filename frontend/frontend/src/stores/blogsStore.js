@@ -82,5 +82,12 @@ export const BLOGS_INFO = {
     readTime: '10 min',
     summary:
       'A complete technical guide for developers and system administrators on mastering Cloudflare DNS, Redirect Rules, Expressions, SSL, multi-domain management, and advanced redirect logic.'
+  },
+  odoo_nginx_domin: {
+    title: `Complete Guide: Troubleshooting Docker, Nginx, and Let's Encrypt SSL Certificate Issues`,
+    routeName: 'OdooNginxDomain',
+    date: '2025-10-11',
+    readTime: '15 min',
+    summary: `A comprehensive guide to resolving common Docker containerization issues, Nginx configuration problems, and Let's Encrypt SSL certificate generation failures. Learn how to debug connection refused errors, fix PostgreSQL permissions, and successfully deploy Odoo with HTTPS.`
   }
 }

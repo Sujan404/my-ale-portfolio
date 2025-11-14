@@ -4,6 +4,7 @@ import Proxy from '@/views/home/blogs/2025/Proxy.vue'
 import NginxOdooError from '@/views/home/blogs/2025/NginxOdooError.vue'
 import BashHereDoc from '@/views/home/blogs/2025/BashHereDoc.vue'
 import CloudflareRedirectRules from '@/views/home/blogs/2025/CloudflareRedirectRules.vue'
+import OdooNginxDomain from '@/views/home/blogs/2025/OdooNginxDomain.vue'
 import BuildAndRunTimeIntegration from '@/views/home/blogs/2025/BuildAndRunTimeIntegration.vue'
 import Docker from '@/views/home/blogs/2024/Docker.vue'
 import HotReloadVueContainer from '@/views/home/blogs/2024/HotReloadVueContainer.vue'
@@ -99,6 +100,11 @@ const router = createRouter({
       path: '/2025/cloudflare-redirect-rules',
       name:'CloudflareRedirectRules',
       component:CloudflareRedirectRules
+    },
+     {
+      path: '/2025/odoo-nginx-domain',
+      name: 'OdooNginxDomain',
+      component: OdooNginxDomain
     },
     // Catch-all route for undefined paths
     {
