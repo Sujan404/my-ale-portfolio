@@ -262,7 +262,7 @@ docker port your-nginx-container</code></pre>
                   </p>
                   <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
                     <pre class="text-sm text-red-800">NAME                STATUS
-softwaresharktech-nginx    Restarting (1) 10 seconds ago</pre>
+nginx-container    Restarting (1) 10 seconds ago</pre>
                   </div>
 
                   <h3 class="text-xl font-semibold mb-4">Step 3: Examine Container Logs</h3>
