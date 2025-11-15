@@ -70,14 +70,14 @@
         <!-- HEADER -->
         <div class="mb-8">
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-            Mastering Cloudflare DNS & Redirect Rules: A Complete Guide for Multi-Domain Management
+            {{ BLOGS_INFO['cloudflare_redirect_rules']['title'] }}
           </h1>
 
           <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">Cloudflare</span>
             <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">DNS</span>
             <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">DevOps</span>
-            <span>2025 | 10–12 min read</span>
+            <span>{{ BLOGS_INFO['cloudflare_redirect_rules']['date'] }} | {{ BLOGS_INFO['cloudflare_redirect_rules']['readTime'] }}</span>
           </div>
         </div>
 
@@ -376,6 +376,7 @@ import { ref, onMounted } from 'vue'
 import NavBar from '@/views/home/Navigation.vue'
 import Footer from '@/views/home/Footer.vue'
 import { Head } from '@unhead/vue/components'
+import { BLOGS_INFO } from '@/stores/blogsStore'
 
 // STATE
 const isMobileTocHidden = ref(true)

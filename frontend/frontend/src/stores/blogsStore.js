@@ -79,7 +79,7 @@ export const BLOGS_INFO = {
     title: 'Mastering Cloudflare DNS & Redirect Rules: A Complete Guide for Multi-Domain Management',
     routeName: 'CloudflareRedirectRules',
     date: '2025-11-04',
-    readTime: '10 min',
+    readTime: '7 min',
     summary:
       'A complete technical guide for developers and system administrators on mastering Cloudflare DNS, Redirect Rules, Expressions, SSL, multi-domain management, and advanced redirect logic.'
   },
