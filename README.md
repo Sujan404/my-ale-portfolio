@@ -30,7 +30,7 @@ npm install
 To run the site locally in development mode, use the following command:
 ```bash
 npm run dev
-````
+```
 
 This will start a local server, and you can view the site in your browser at http://localhost:5173. Any changes you make to the code will hot-reload automatically.
 

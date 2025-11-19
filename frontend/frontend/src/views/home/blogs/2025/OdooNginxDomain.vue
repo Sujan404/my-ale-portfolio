@@ -15,10 +15,10 @@
     <div class="mb-3">
       <NavBar />
     </div>
-    <div class="bg-gray-50 min-h-screen">
-      <div class="lg:hidden fixed top-4 right-4 z-50">
+    <!-- <div class="bg-gray-50 min-h-screen"> -->
+      <div class="lg:hidden fixed top-20 right-4 z-50">
         <button
-          @click="toggleMobileToc()"
+          @click="toggleMobileToc"
           class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,13 +39,13 @@
         @click="closeMobileToc()"
       >
         <div
-          class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-xl overflow-y-auto"
+          class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out overflow-y-auto"
           @click.stop=""
         >
           <div class="p-4">
             <div class="flex justify-between items-center mb-4">
               <h2 class="text-lg font-bold">Table of Contents</h2>
-              <button @click="closeMobileToc()" class="text-gray-500 hover:text-gray-700">
+              <button @click="closeMobileToc" class="text-gray-500 hover:text-gray-700">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-8">
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
             {{ BLOGS_INFO['odoo_nginx_domin']['title'] }}
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
           <div class="hidden lg:block lg:w-80 flex-shrink-0">
             <nav class="sticky top-8 bg-white rounded-xl p-6 shadow-sm border">
               <div class="bg-blue-600 rounded-lg p-4 mb-6">
@@ -1086,7 +1086,7 @@ echo "🎉 Deployment complete!"</code></pre>
           </article>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
     <Footer />
   </div>
 </template>
@@ -1170,6 +1170,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.max-w-screen-xl {
+  overflow-x: hidden;
+}
+
 .prose {
   color: #374151;
 }
