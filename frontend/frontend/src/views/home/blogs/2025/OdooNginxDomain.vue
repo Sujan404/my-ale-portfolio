@@ -16,7 +16,7 @@
       <NavBar />
     </div>
     <!-- <div class="bg-gray-50 min-h-screen"> -->
-      <div class="md:hidden fixed top-4 right-4 z-50">
+      <div class="lg:hidden fixed top-20 right-4 z-50">
         <button
           @click="toggleMobileToc"
           class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
@@ -34,7 +34,7 @@
 
       <div
         id="mobileToc"
-        class="md:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
+        class="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
         :class="{ hidden: isMobileTocHidden }"
         @click="closeMobileToc()"
       >
@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="max-w-screen-xl mx-auto p-4 sm:p-6 xl:p-8">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-8">
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
             {{ BLOGS_INFO['odoo_nginx_domin']['title'] }}
@@ -1131,12 +1131,12 @@ const generateToc = () => {
 
 const toggleMobileToc = () => {
   isMobileTocHidden.value = !isMobileTocHidden.value
-  // document.body.style.overflow = isMobileTocHidden.value ? 'auto' : 'hidden'
+  document.body.style.overflow = isMobileTocHidden.value ? 'auto' : 'hidden'
 }
 
 const closeMobileToc = () => {
   isMobileTocHidden.value = true
-  // document.body.style.overflow = 'auto'
+  document.body.style.overflow = 'auto'
 }
 
 const copyCode = (preElement) => {
@@ -1170,6 +1170,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.max-w-screen-xl {
+  overflow-x: hidden;
+}
+
 .prose {
   color: #374151;
 }

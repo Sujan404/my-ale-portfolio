@@ -18,11 +18,11 @@
       <NavBar />
     </div>
 
-    <div class="bg-gray-50 min-h-screen">
+    <!-- <div class="bg-gray-50 min-h-screen"> -->
       <!-- MOBILE TOC -->
-      <div class="lg:hidden fixed top-4 right-4 z-50">
+      <div class="lg:hidden fixed top-20 right-4 z-50">
         <button
-          @click="toggleMobileToc()"
+          @click="toggleMobileToc"
           class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@
       </div>
 
       <!-- MAIN CONTENT -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <!-- HEADER -->
         <div class="mb-8">
@@ -364,7 +364,7 @@ concat("https://", http.host, http.request.uri.path)</code></pre>
 
         </div>
       </div>
-    </div>
+    <!-- </div> -->
 
     <Footer />
   </div>
