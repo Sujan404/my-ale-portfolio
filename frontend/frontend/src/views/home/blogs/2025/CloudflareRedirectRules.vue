@@ -352,7 +352,9 @@ concat("https://", http.host, http.request.uri.path)</code></pre>
                   </p>
                   <p class="leading-relaxed text-lg">
                     When combined with platforms like Odoo, understanding where domain routing should happen — at
-                    Cloudflare or at the application layer — becomes essential. By handling canonical redirects,
+                    Cloudflare or at the application layer — becomes essential. I have worked on directing multi-domain 
+                    either non-www to www within in same domain server or converging non-identical domains to one. It was daunting
+                    at the very beginning but by handling canonical redirects,
                     multi-domain routing, and DNS management at Cloudflare, you reduce load on your servers and achieve
                     maximum reliability.
                   </p>
