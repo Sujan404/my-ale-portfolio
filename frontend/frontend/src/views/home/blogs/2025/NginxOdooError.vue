@@ -17,7 +17,7 @@
     </div>
 
     <!-- Mobile Table of Contents Toggle -->
-    <div class="md:hidden fixed top-20 right-4 z-50">
+    <div class="lg:hidden fixed top-20 right-4 z-50">
       <button
         @click="toggleMobileToc"
         class="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors"
@@ -36,7 +36,7 @@
     <!-- Mobile TOC Overlay -->
     <div
       v-if="showMobileToc"
-      class="md:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
+      class="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
       @click="closeMobileToc"
     >
       <div
